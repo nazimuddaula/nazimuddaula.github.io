@@ -100,20 +100,20 @@ a:hover {
     opacity: 1; } }
 
 html {
-  background-color: #061C30; }
+  background-color: #1e1b16; }
 
 body.page-template-page-fullsingle-split {
-  background-color: #061C30;
+  background-color: #1e1b16;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 21px;
   line-height: 33px;
   letter-spacing: -0.2px;
-  color: #848d96;
+  color: #727272;
   -webkit-animation: fadein 2s;
           animation: fadein 2s; }
   body.page-template-page-fullsingle-split p {
-    color: #848d96; }
+    color: #727272; }
 
 .fs-split {
   width: 100vw;
@@ -129,7 +129,7 @@ body.page-template-page-fullsingle-split {
   .fs-split .split-image {
     width: 50%;
     height: 100vh;
-    background-image: url("../../img/na-cover.jpg");
+    background-image: url("../../img/na-cover-z.jpg");
     background-position: center center;
     background-size: cover; }
     @media (max-width: 800px) {
@@ -191,11 +191,11 @@ body.page-template-page-fullsingle-split {
     .split-bio {
       padding: 20px 0; } }
   .split-bio p {
-    color: #848d96; }
+    color: #727272; }
   .split-bio a {
-    color: #848d96;
+    color: #727272;
     transition-duration: 0.5s;
-    border-bottom: 1px dotted #848d96; }
+    border-bottom: 1px dotted #727272; }
     .split-bio a:hover {
       color: #CA486d;
       transition-duration: 0.1s;
@@ -214,7 +214,7 @@ body.page-template-page-fullsingle-split {
     font-size: 11px;
     line-height: 11px;
     margin-bottom: 31px;
-    color: #848d96;
+    color: #727272;
     letter-spacing: 2px;
     opacity: 0.5; }
   .split-lists .split-list ul li {
@@ -222,7 +222,7 @@ body.page-template-page-fullsingle-split {
     line-height: 16px;
     margin-bottom: 12px; }
     .split-lists .split-list ul li a {
-      color: #848d96;
+      color: #727272;
       transition-duration: 0.5s; }
       .split-lists .split-list ul li a:hover {
         color: #CA486d;
@@ -234,7 +234,7 @@ body.page-template-page-fullsingle-split {
     font-size: 12px;
     line-height: 14px; }
     .split-credit p a {
-      color: #848d96; }
+      color: #727272; }
 
 .split-video {
   overflow: hidden;
