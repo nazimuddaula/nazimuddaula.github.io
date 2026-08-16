@@ -6,6 +6,8 @@ A portfolio website covering ~20 years of work (case studies + a "scrapbook" of 
 ## End goal / deployment
 - Will live at **https://nazim.uddau.la/portfolio**, as a subsection of the existing site https://nazim.uddau.la/
 - The existing site is hosted on **GitHub Pages**, managed via the **GitHub Desktop app**
+- Favicon is served from the existing site at **/img/ico/mn-144x144.png** (root-relative, not part of this project's files) — every page's `<helmet>` links to it directly.
+- Every page (`index.html`, `Resume.dc.html`, all case studies, all scrapbooks) has a `<title>`, `<meta name="description">`, canonical link, and Open Graph/Twitter Card tags (per-page cover image) pointing at `https://nazim.uddau.la/portfolio/<file>`. Keep these in sync if a page's title/cover/URL changes.
 - Owner is **not technical / not a coder** — avoid requiring build steps, terminal commands, etc.
 - Final deliverable: a **clean, self-contained package** ready to drop into the GitHub repo via GitHub Desktop — meaning: strip dev-only scaffolding (dev-responsive-toggle.js, unused v1/backup files, stray exports) before final handoff. Do NOT do this cleanup yet — only when explicitly asked; work is still in progress page by page.
 
