@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Personal Project · 2014 – 2015</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Lekhok Keyboard</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Not every project on this page was built for a company. Lekhok Keyboard was built for a language.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/lekhok-cover.webp" alt="Lekhok Keyboard key layout" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The Lekhok Keyboard key layout. This wasn't a unique idea, plenty of others were tackling the same problem, and some even turned it into a real business. I just wanted to build my own version.</p>
+  
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="Why This One Is Different" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Why This One Is Different</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">It came out of frustration, love, and a stubborn refusal to accept something that had quietly become normal: writing Bangla using English letters and sounds, because that was simply what phonetic keyboards made easiest.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">I'm not a linguist. I'm not a scholar of Bangla literature. I've said as much publicly before. But I grew up caring about this script the way some people care about family, and somewhere along the way I decided that caring wasn't enough. I wanted to build something.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="Where It Started: A Font, Not a Keyboard" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Where It Started: A Font, Not a Keyboard</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">This story actually begins years earlier, in 2009, when I got the chance to design a custom Bangla font for Robi as part of their rebrand. That project is where I first understood, really understood, how much complexity lives inside our alphabet. Bangla has 11 vowels and 39 consonants, but that's only the beginning. There are roughly 90 commonly used conjunct characters, and more than 120 additional three-part conjuncts formed through various consonant-conjunct marks (ন-ফলা, ম-ফলা, য-ফলা, র-ফলা, ল-ফলা, and ব-ফলা). Designing type for this script means holding all of that in your head at once.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">In 2013, that early experience led to something bigger. I was part of a font design initiative called Amar Bornomala, developed in collaboration with Bangla Academy and the Graphic Design department at Dhaka University. The font was unveiled on the eve of International Mother Language Day.</p>
+    </section>
+
+    <img src="assets/lekhok-gallery-h2.webp" alt="Bangla conjunct characters" style="width:100%;display:block;">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 56px;">Bangla's long list of complex conjunct characters makes the language genuinely hard to learn, even for native speakers.</p>
+
+    <section id="sec-3" data-nav-title="The Idea Behind Lekhok" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Idea Behind Lekhok</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Somewhere in that process, a different question started forming: what if the problem wasn't just fonts, but how we type Bangla in the first place?</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Phonetic keyboards helped Bangla spread across the early internet, and I'm genuinely grateful to the people and tools that made that possible. But they also meant an entire generation was learning to write Bangla by thinking in English first. That never sat right with me.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">When I actually sat down to design a new keyboard, the scale of the problem looked impossible at first. Then I noticed something simple: Bangla has only 50 base characters, vowels and consonants combined. English fits 52 characters onto 26 keys using shift. If Bangla could do something similar, the base layout would only need 25 keys, with one additional key acting as a kind of wildcard, handling conjuncts, vowel marks, and reph. That single realization became the entire foundation of Lekhok's keyboard layout.</p>
+    </section>
+
+    <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:40px;line-height:normal;color:#000080;text-align:center;max-width:600px;margin:80px auto;padding:0;">"I wanted to write Bangla the way I write English."</blockquote>
+
+    <img src="assets/lekhok-gallery-h.webp" alt="Lekhok Keyboard layout sketches" style="width:100%;display:block;">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 56px;">Like most design work, it started on paper, sketching out combinations for the conjunct characters.</p>
+
+    <section id="sec-4" data-nav-title="Launch, and What Came After" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Launch, and What Came After</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">I'm not a technical person by training. I was lucky to have two friends who believed in this enough to help me actually build it.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The typing screen puts that 25-key layout into practice, with the wildcard key handling conjuncts, vowel marks, and reph as you write.</p>
+      <img src="assets/lekhok-keyboard-demo.gif" alt="Lekhok Keyboard typing demo" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 20px;">The keyboard in action, typing a conjunct in real time.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Lekhok launched on Android two days before International Mother Language Day, on 19 February 2015. There was no press wave, no viral moment, nothing dramatic. It just quietly existed. Over time, usage grew, a few thousand people at first, eventually reaching around 100,000 downloads. Some users found it hard to switch from what they already knew. I understood that, and never tried to convince anyone they were wrong for preferring phonetic typing. I only wanted to build something for the people who felt the same pull I did, toward the complexity of the script rather than away from it.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">One thing I chose deliberately: I never pursued copyright protection for the keyboard layout or design. I wanted it open. If someone wanted to build a physical keyboard using this layout and sell it, I welcomed that, and offered to help however I could. This project was never about ownership. It was about the language surviving in its own form.</p>
+    </section>
+
+    <section id="sec-5" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reflection</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Lekhok never became a business. It has bugs I never got around to fixing, and features like word suggestion and auto-correct that stayed on my someday list. By most conventional measures, it's an unfinished project.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">But I don't measure it that way. This is one of the few things I've built where the outcome was never really the point. I put my heart into this, more than almost anything else I've made, and I still think of it less as a product and more as a small, sincere attempt to keep something I love from quietly disappearing.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-JossPay.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← JossPay, the Wallet</a>
+      <a href="Case-Study-Robi.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">The Robi Bangla Font →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+    }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgFloat: this.state.isMobile ? 'none' : 'left',
+      vImgWidth: this.state.isMobile ? '100%' : '280px',
+      vImgMargin: this.state.isMobile ? '0 0 16px 0' : '0 32px 16px 0',
+      navLabel: this.state.isMobile ? 'Lekhok' : 'Lekhok Keyboard',
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+</script>
+</body>
+</html>

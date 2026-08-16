@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">E-Commerce · Sep 2022–Jan 2024 · Head of Brand and Communication</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Making Chaldal's Human Side as Deliberate as the Product</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">After building Chaldal's product layer, I moved into Head of Brand and Communication, from a TV drama that challenged the stigma around delivery work to national campaigns, customer service, and being the company's public face.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/chaldal-brand-cover.webp" alt="Behind the camera during production of a Chaldal TV commercial" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">Behind the camera during production of one of Chaldal's TV commercials.</p>
+
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="The Transition" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Transition</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">As Head of Product, my focus had always been making the product successful, and to me that meant more than good screens. It meant making sure users actually understood what we were building for them and why it mattered, and helping the internal team build processes efficient enough to translate directly into a better customer experience. Grocery delivery in Bangladesh is not simple. Traffic, infrastructure gaps, and a lack of proper training or recognition for delivery workers all shape whether a product actually works in the real world, not just on a screen.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">That thinking is what carried me into the Head of Brand and Communication role. It wasn't a departure from product thinking, it was an extension of it, aimed at the human side of the business instead of the interface.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="TV Drama" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Changing How People See a Delivery Job</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">While I was still Head of Product, before this role even had a name, I developed an idea that stayed with me: producing a TV drama to challenge how Bangladeshi society viewed delivery work. In our culture, being a delivery person still carries a stigma strong enough that many young people would rather stay unemployed than take the job. The drama was built to confront that mindset directly, to make being a delivery person something to be proud of, not something to hide.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">It was broadcast on national TV in a prime-time slot, which meant it reached far beyond Chaldal's own customers. For delivery workers across the entire industry, not just ours, seeing their profession portrayed with dignity on national television was a massive thing.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">I don't want to take too much credit for what came after. This was a starting point, not the whole story, and more dramas addressing the same stigma were produced and broadcast in the years that followed. But it became one of the clearest examples I've been part of brand work meant to change a belief, not just sell a product.</p>
+      <div style="width:100%;aspect-ratio:16/9;">
+        <iframe src="https://www.youtube-nocookie.com/embed/9CpULHwYIKI" title="Chaldal TV drama" referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:100%;border:none;display:block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+      </div>
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The TV drama commissioned to challenge the stigma around delivery work.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="Brand Engine" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Running the Daily Brand Engine</div>
+      <div style="overflow:auto;">
+        <div style="float:{{ vImgFloat }};width:{{ vImgWidth }};margin:{{ vImgMargin }};">
+          <img src="assets/chaldal-brand-engine-v1.webp" alt="Puzzle game concept idea" style="width:100%;display:block;">
+          <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">An idea for a basic puzzle game which can be touched, hold and played&nbsp;</p>
+        </div>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">In this role, I owned all of Chaldal's daily brand communication, every campaign across online and offline channels. A full design team worked under me to produce the volume and consistency this required, day in and day out. This was less about single big moments and more about keeping a consistent voice and presence in front of customers constantly.</p>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Managing social media day to day meant measuring engagement constantly, watching which posts, formats, and campaigns were actually landing with customers and which weren't, then adjusting the content plan accordingly. That feedback loop ran continuously, week over week.</p>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Alongside that, the team also planned and created moments meant to last far longer than any single channel could hold, brand memories that don't always show up cleanly in a metrics dashboard, but stay with people long after the moment itself has passed.</p>
+      </div>
+    </section>
+
+    <section id="sec-4" data-nav-title="Customer Service" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Customer Service: Where Product Meets Reality</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">I also took ownership of the customer service function, leading a team handling multi-channel support. This was one of the biggest learning experiences of my career. Building a product well on screen means very little if it doesn't actually help someone in their daily life. Sitting close to customer service showed me, unfiltered, where our systems succeeded and where they quietly failed people.</p>
+    </section>
+
+    <section id="sec-5" data-nav-title="National Campaign" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">A National Campaign, Told Through Story</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">During Chaldal's nationwide expansion, I produced a 5-episode video commercial series, working with some of the country's most prominent celebrities and a leading director. It was one of the largest brand storytelling efforts I led, built to introduce Chaldal to audiences far beyond Dhaka as the company scaled.</p>
+      <div style="width:100%;aspect-ratio:16/9;">
+        <iframe src="https://www.youtube-nocookie.com/embed/V5NSfu4hnq0" title="Chaldal national campaign" referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:100%;border:none;display:block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+      </div>
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 20px;">One of the 5 episodes from the national campaign.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">For me, it was the first time for many things. I witnessed the production process sitting beside one of the most powerful directors of our time, and experienced the immense hard work put in for hours to make a perfect shot just for a few seconds on screen. I felt the pressure of determining the right time to launch, and the fear of the public reaction that would follow. Dealing with media planning and buying was a brand new experience for me too.</p>
+      <dc-import name="Note" icon="link" text="The full story behind this campaign is on Medium." links="{{ campaignNoteLinks }}" hint-size="100%,40px"></dc-import>
+    </section>
+
+    <section id="sec-6" data-nav-title="Training" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Training the People Who Carry the Brand</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">I designed and wrote training manuals and built an assessment process aimed at improving delivery quality directly. This wasn't abstract brand work, it was about giving delivery staff the tools and standards to do their jobs well and be recognized for it, connecting back to the same stigma the TV drama was built to address.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">It was a handbook for the people who represented Chaldal in front of customers. They played a crucial role, as Chaldal believed delivering groceries was one of the toughest jobs, and how they handled the goods and interacted with customers during delivery mattered enormously.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">From the beginning of 2023, Chaldal started expanding rapidly across the country, necessitating the development of a comprehensive process to train new delivery personnel. This manual served as a baseline script to prepare other resources, such as training videos.</p>
+      <img src="assets/chaldal-training-h.webp" alt="Page from the delivery personnel training manual" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">A page from the delivery personnel training manual.</p>
+    </section>
+
+    <section id="sec-7" data-nav-title="Vehicle Branding" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Branding on Wheels, and the Regulatory Reality Behind It</div>
+      <div style="overflow:auto;">
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">I hired external artists to design branded artwork for Chaldal's delivery vehicles. But the creative work was only half of it. Getting that branding onto vehicles on actual roads meant navigating a full regulatory approval process, a reminder that even the most visible, joyful piece of brand work still has to survive contact with bureaucracy and real-world constraints.</p>
+      </div>
+      <img src="assets/chaldal-vehicle-h.webp" alt="Chaldal delivery vehicle with branded artwork" style="width:100%;display:block;margin-top:32px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">A Chaldal delivery vehicle, branded artwork by an external artist.</p>
+    </section>
+
+    <section id="sec-8" data-nav-title="Packaging" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Redesigning the Physical Touchpoints</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Eggs were always a flagship product for Chaldal, tied back to the meaning behind the company's name itself. I had the chance to redesign the Egg Box, along with several other packaging types used across grocery deliveries, extending the brand into something customers physically held in their hands.</p>
+      <img src="assets/chaldal-packaging-h.webp" alt="Egg Box redesign direction" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">An early direction for the Egg Box redesign, not the version we ultimately shipped.</p>
+    </section>
+
+    <section id="sec-9" data-nav-title="Public Face" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Face of the Company</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Beyond individual projects, much of this role was simply communication. I regularly represented Chaldal to the press, to universities, and to research initiatives, becoming one of the public faces people associated with the company during this period.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">One of the fastest-growing e-commerce platforms at the time was questioned, criticized, and later blocked by the government over unlawful and fraudulent activity.</p>
+    </section>
+
+    <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:40px;line-height:normal;color:#000080;text-align:center;max-width:600px;margin:80px auto;padding:0;">"I was in this crucial role when the whole e-commerce industry went through a turmoil of mistrust."</blockquote>
+
+    <section id="sec-10" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reflection</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Looking back at everything on this list now gives me a strange kind of satisfaction I don't think I fully let myself feel while I was living through it. There were real chances for things to go wrong at almost every one of these points, a drama that could have missed its mark, a regulatory process that could have stalled a campaign, a customer service failure that could have gone public, a brand risk in putting myself forward as the face of the company. I survived it. This wasn't an easy role for someone like me, and it's only now, writing it down, that I understand how much I actually carried.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-Chaldal.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Chaldal, Head of Product</a>
+      <a href="Case-Study-Maya.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">Redesigning Maya →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgFloat: this.state.isMobile ? 'none' : 'left',
+      vImgWidth: this.state.isMobile ? '100%' : '280px',
+      vImgMargin: this.state.isMobile ? '0 0 16px 0' : '0 32px 16px 0',
+      navLabel: this.state.isMobile ? 'Chaldal' : 'Chaldal, Head of Brand and Communication',
+      campaignNoteLinks: [{ label: 'Read the story on Medium', url: 'https://medium.com/nazimuddaula/behind-the-story-the-brand-new-video-commercials-of-chaldal-3f59cba1092b?sharedUserId=nazimuddaula' }],
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

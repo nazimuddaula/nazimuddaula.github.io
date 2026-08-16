@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Smart Card Fintech · Feb–Sep 2024 · Product Director</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Building a Financial Bridge for Migrant Workers</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">At KONA SL, I directed a cross-border financial product for migrant workers.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/kona-cover.webp" alt="Redacted KONA SL product and research documentation" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The website I designed and wrote during the documentation process later became the main website for KONA SL.</p>
+
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="The Context" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Context</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">South Korea has the lowest birth rate in the world. Its population is aging fast, and the shift in demographics is opening the country's borders wider than ever to foreign labor. Bangladesh has become one of the largest sources of that labor, thousands of young, skilled workers moving to South Korea every year, many staying five to ten years before returning home.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">They earn well. But not everyone manages that money wisely, and the systems available to them, split between two countries, two currencies, two very different financial systems, weren't built with them in mind.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">KONA SL saw the opportunity in that gap. As a South Korean fintech company already embedded in Bangladesh's financial infrastructure, supplying smart card technology to most of the country's banks, KONA was positioned to do something few others could: build a cross-border platform that let migrant workers start building financial foundations at home while still earning abroad.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="The Challenge" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Challenge</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The product had to work in two fundamentally different environments at once. South Korea is a culturally homogeneous society, and adaptation is one of the hardest things a foreign worker faces there, including access to financial tools designed around Korean norms and language. Bangladesh, meanwhile, has one of the more complex regulatory environments for tech-driven financial products, especially anything crossing borders or touching Bangladesh Bank's oversight.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">The product needed to satisfy both realities simultaneously: compliant and trustworthy enough for regulators in Bangladesh, and usable and relevant for a migrant worker navigating life in Korea.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="My Role" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">My Role</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">I joined as Product Director to lead this from the ground up, building a product accessible in Bangladesh first, with South Korea and eventually other neighboring countries as the next phase. Two tracks ran in parallel, plus two more I took on along the way.</p>
+
+      <div style="overflow:auto;">
+        <div style="float:{{ vImgFloat }};width:{{ vImgWidth }};margin:{{ vImgMargin }};">
+          <img src="assets/kona-gallery-v2.webp" alt="First draft of the cross-border wallet application" style="width:100%;display:block;">
+          <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The 1st draft of the application for cross-border transactions.</p>
+        </div>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;"><strong>Regulatory approval.</strong> I started the documentation process, building the business case that Bangladesh Bank, the country's financial regulatory authority, would need to evaluate a cross-border fintech product, a bar that's demanding even for standard financial products, let alone one spanning two countries.</p>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;"><strong>Product design.</strong> Alongside the regulatory work, I designed the first draft of the wallet application, the actual interface migrant workers and their families back home would use, so the proposal to regulators wasn't just a business case, but a tangible product they could evaluate.</p>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;"><strong>On-the-ground research.</strong> To design for migrant workers honestly, I spent two weeks in South Korea conducting user research directly with the community, understanding how they actually managed money, what tools they trusted, and where the friction of living between two systems showed up in their daily lives. That trip shaped the wallet's first draft more than any assumption I could have made from Dhaka.</p>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;"><strong>Website redesign.</strong> On top of the wallet work, I took on redesigning KONA SL's corporate website end to end, design, content strategy, and copywriting were mine, working with a single developer to bring it to life. Seven months wasn't enough time to see the wallet through to launch, but the website shipped, it's still KONA SL's live site today.</p>
+      </div>
+
+      <div style="display:flex;justify-content:center;margin-top:32px;">
+        <div style="width:100%;aspect-ratio:744/1133;background:#1A1A1A;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 24px 60px rgba(0,0,0,0.25);position:relative;display:flex;flex-direction:column;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#333;position:absolute;top:22px;left:50%;transform:translateX(-50%);"></div>
+          <div style="border-radius:14px 14px 0 0;overflow:hidden;display:flex;flex-direction:column;flex:1;background:#fff;">
+            <div style="flex-shrink:0;height:40px;background:#E4E4E6;display:flex;align-items:center;padding:0 12px;gap:8px;">
+              <div style="flex:1;height:24px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:6px;">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#8A8A8E" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span style="font-size:11px;color:#3C3C43;font-family:system-ui,-apple-system,sans-serif;">konasl.com</span>
+              </div>
+            </div>
+            <iframe src="https://konasl.com/" title="KONA SL live site" loading="lazy" style="width:100%;flex:1;border:0;display:block;background:#fff;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-5" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reflection</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">I left KONA SL after seven months, an offer from Neura Robotics arrived, and it was one of those opportunities that's genuinely hard to turn down. Looking back, the pace was intense for a short window: building the regulatory business case, designing a first product draft, running two weeks of field research in another country, and rebuilding a company's website, all in parallel. It's the kind of work that doesn't fully show up in a timeline, but it's some of the most demanding and formative work I did before Neura.</p>
+
+      <img src="assets/kona-website-h1.webp" alt="On the ground in South Korea during user research" style="width:100%;display:block;margin-top:32px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">On the ground in South Korea, still one of the brightest memories of my career.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-Neura.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Neura</a>
+      <a href="Case-Study-Chaldal.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">Chaldal, Head of Product →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgFloat: this.state.isMobile ? 'none' : 'left',
+      vImgWidth: this.state.isMobile ? '100%' : '280px',
+      vImgMargin: this.state.isMobile ? '0 0 16px 0' : '0 32px 16px 0',
+      navLabel: this.state.isMobile ? 'KONA SL' : 'KONA SL, Cross-Border Wallet',
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+</script>
+</body>
+</html>

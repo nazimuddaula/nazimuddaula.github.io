@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&family=Offside&family=Over+the+Rainbow&display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">A G&amp;R product, told as its own story &middot; 2014&ndash;2018</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">JossPay, the Wallet</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">A licensed digital wallet built inside G&amp;R, meant to become Bangladesh's version of PayPal. It didn't launch the way I planned, but the license is still alive today, running as ST Pay inside ShareTrip.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/josspay-cover.webp" alt="The JossPay wallet home screen on iOS" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The JossPay wallet, home screen on iOS.</p>
+  
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="About JossPay" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">About JossPay</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">JossPay is the project I have the most complicated feelings about. It was a wallet product built inside G&amp;R, using a Payment System Provider (PSP) license issued by Bangladesh Bank, the country's financial regulatory authority. I'm telling it separately from the main G&amp;R story because it deserves its own arc, its own lessons, distinct from the ad network that carried the company.</p>
+      <div style="overflow:auto;">
+        <div style="float:{{ vImgFloat }};width:{{ vImgWidth }};margin:{{ vImgMargin }};">
+          <img src="assets/josspay-gallery-v1.webp" alt="The JossPay logo mark" style="width:100%;display:block;">
+          <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The JossPay logo mark.</p>
+        </div>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">It started as an internal necessity, not a product idea. Back in 2014, G&amp;R needed a way to handle transactions with advertisers, publishers, and agency partners. That meant building real financial infrastructure: calculating transactions in real time, catching fraudulent activity, connecting to multiple payment sources. Once that groundwork existed, an idea followed naturally. If we already had the technology to move money reliably, why not build something bigger with it. JossPay was meant to be Bangladesh's version of PayPal.</p>
+      </div>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:20px 0 0;">The name wasn't arbitrary. It drew on a Bangla word with a double meaning, chosen to feel local, warm, and a little bit proud.</p>
+
+      <div style="margin-top:20px;">
+        <dc-import name="Note" icon="link" text="G&amp;R built a whole family of Joss-branded products. That story is in the G&amp;R Horizon case study." links="{{ horizonNoteLinks }}" hint-size="100%,40px"></dc-import>
+      </div>
+
+      <img src="assets/josspay-brand-h.webp" alt="Breaking down JossPay's name" style="width:100%;display:block;margin-top:32px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The thinking behind JossPay's name and identity.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="The Challenge" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Challenge</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">In 2014, digital payment was still a genuinely hard problem for anyone doing internet business in Bangladesh. For an ad technology company specifically, it was harder still, since budgets had to be calculated against every single ad request in real time.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Multiple banks offered payment gateway solutions, but regulatory authority had imposed strict law against unauthorized transactions. Getting formal approval wasn't optional, it was mandatory before any fintech product could exist. Still, the need was real. The internet in Bangladesh was booming, and there was no local, trusted answer to the question of how to move money as easily as PayPal did elsewhere.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="My Role" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">My Role</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">From inception to beta, we spent around two years building this product while navigating every regulatory requirement along the way.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Part of my role was running the regulatory groundwork with Bangladesh Bank: reviewing what they required and getting a working version of the app in front of them to review, not just a pitch deck, but a real product they could test.</p>
+
+      <img src="assets/josspay-documents-h.webp" alt="Regulatory documentation prepared for Bangladesh Bank" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 20px;">Documentation prepared for Bangladesh Bank's regulatory review.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">The rest was a team effort: brand identity, the internal dashboard, and the product design across Android and iOS.</p>
+
+      <img src="assets/josspay-gallery-h.webp" alt="The JossPay Android app screens" style="width:100%;display:block;margin-top:32px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The JossPay Android app: balance, transfers, circles, and account screens.</p>
+    </section>
+
+    <section id="sec-4" data-nav-title="The Setback" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Setback, and What Came After</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">It took two full years just to get the initial NOC (No Objection Certificate) that would let the app go public. By the time that approval finally came through, the market had already moved. Competing products were live and fighting to prove their own business models, and Mobile Financial Services (MFS) was rising fast, an already-established, trusted category that made it much harder to see any real future for a wallet built the way JossPay was.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">We had built something genuinely functional, with real regulatory rigor behind it. But two years is a long time in a market moving that fast, and by the time we were allowed to launch, the moment that made JossPay necessary had largely passed.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The license didn't die with the delay, though. It's still active today, running as ST Pay inside ShareTrip, one of Bangladesh's largest travel commerce platforms. I wasn't there to see it get there, but what the team and I spent two years building is still doing exactly what it was built to do, just not under our watch, and not under the name we gave it.</p>
+      <div style="margin-top:20px;">
+        <dc-import name="Note" icon="external" text="ST Pay still carries the PSP license originally issued for JossPay." links="{{ stpayNoteLinks }}" hint-size="100%,40px"></dc-import>
+      </div>
+    </section>
+
+    <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:40px;line-height:normal;color:#000080;text-align:center;max-width:600px;margin:80px auto;padding:0;">"I didn't see it succeed. That doesn't mean it didn't."</blockquote>
+
+    <section id="sec-5" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reflection</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">JossPay taught me something the successful projects never could, that being right about a need and being fast enough to meet it are two completely different problems. We understood exactly what Bangladesh needed. We built it carefully, correctly, and with real integrity toward the regulatory process. I didn't get to see it succeed on my own terms, timing cost us that.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-GR.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">&larr; G&amp;R, Building the Ad Network</a>
+      <a href="Case-Study-Lekhok.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">Lekhok Keyboard &rarr;</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer &middot; Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">&copy; 2009&ndash;2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I&rsquo;ve worked for.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+    }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgFloat: this.state.isMobile ? 'none' : 'left',
+      vImgWidth: this.state.isMobile ? '100%' : '280px',
+      vImgMargin: this.state.isMobile ? '0 0 16px 0' : '0 32px 16px 0',
+      navLabel: this.state.isMobile ? 'JossPay' : 'JossPay, the Wallet',
+      horizonNoteLinks: [{ label: 'Read G&R, Increasing the Product Horizon', url: 'Case-Study-GR-Horizon.dc.html' }],
+      stpayNoteLinks: [{ label: 'Visit ST Pay', url: 'https://stpay.net/' }],
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Nonprofit · Apr 2007–Dec 2009 · Volunteer &amp; Design Consultant</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Designing for CARE Bangladesh</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Volunteer design work for CARE's HIV Program, centered on a peer educator training manual that still holds up two decades later.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/care-cover.webp" alt="The Peer Educator Training Manual, printed" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The Peer Educator Training Manual, published in Bangla and English. This photo was taken sometime around 2008 - just after the 1st edition was printed.</p>
+
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="6">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="Where It Started" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Where It Started</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">This one goes back further than almost anything else on this page. I started contributing to CARE Bangladesh as a student, as a volunteer, long before I had any real professional design experience. It began small: handwritten titles for internal team meetings, the kind of quiet, unglamorous visual work nobody notices unless it's missing. But it was enough to earn trust, and slowly that trust turned into bigger responsibilities.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Eventually I was designing external communication materials, posters, leaflets, the visible face of programs meant to reach real people outside the organization.</p>
+
+      <img src="assets/care-poster-h.webp" alt="A festoon design from CARE's outward-facing work" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">One of the festoon designs from that period, part of the outward-facing work that grew out of those early handwritten titles.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="The HIV Project" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Working on the HIV Project</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Most of my contribution centered on CARE's HIV Program, where I designed communication tools meant to educate and inform. Being trusted with something this serious, this consequential, felt like an enormous responsibility at the time. It shaped how seriously I've taken design ever since.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="The Training Manual" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Peer Educator Training Manual</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The most significant piece of work to come out of this period was a training manual for peer educators, published in both Bangla and English. I was 23 or 24, and it was my first major project handling both the visual system and the layout for a full field publication.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 24px;">This wasn't a brochure or a campaign. It was a working tool that outreach workers and peer educators, many of them current or former drug users with limited formal education, would use to train each other on HIV prevention, safe injecting, and sexual health. The brief carried a real tension: the content had to be clinically honest about genuinely difficult subject matter (drug addiction, abscesses, STIs, condom demonstration), without ever feeling cold or judgmental to the people reading it. Getting that tone right, accurate but warm, direct but never alarming, was the real design problem, far more than any single layout decision.</p>
+
+      <div style="border:1px solid var(--rule);padding:16px;">
+        <sc-if value="{{ pdfLoading }}" hint-placeholder-val="{{ true }}">
+          <div style="padding:48px 0;text-align:center;font-size:13px;color:var(--muted);">
+            <sc-if value="{{ pdfError }}" hint-placeholder-val="{{ false }}">Couldn't load the manual preview.</sc-if>
+            <sc-if value="{{ pdfNotError }}" hint-placeholder-val="{{ true }}">Loading manual preview…</sc-if>
+          </div>
+        </sc-if>
+        <canvas ref="{{ pdfCanvasRef }}" style="width:100%;display:{{ pdfCanvasDisplay }};"></canvas>
+        <sc-if value="{{ pdfReady }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px;">
+            <button onClick="{{ prevPdfPage }}" disabled="{{ prevDisabled }}" style="font-family:'Offside',sans-serif;font-size:12px;padding:6px 14px;border:1px solid var(--rule);background:transparent;cursor:pointer;color:var(--ink);">‹ Prev</button>
+            <span style="font-size:12px;color:var(--muted);white-space:nowrap;">Page {{ pdfPage }} of {{ pdfPageCount }}</span>
+            <button onClick="{{ nextPdfPage }}" disabled="{{ nextDisabled }}" style="font-family:'Offside',sans-serif;font-size:12px;padding:6px 14px;border:1px solid var(--rule);background:transparent;cursor:pointer;color:var(--ink);">Next ›</button>
+          </div>
+        </sc-if>
+      </div>
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px 0 0;">The first English draft, page by page, exactly as it was sent for review. Most likely the only version of the design I still have.</p>
+    </section>
+
+    <section id="sec-4" data-nav-title="Building the System" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Building the System</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;"><strong>A color system built for live use.</strong> Each of the ten training sessions needed its own identity, since facilitators would be flipping through this mid-session, often under time pressure. I built a ten-color palette that cycled through every session and carried through every element tied to it, the section divider, the icon panel, the "Notes" pages, even the annexure headers. A facilitator could tell which session they were in without reading a single word. Looking back, this is still the strongest structural decision I made on the project.</p>
+
+      <img src="assets/care-color-h.webp" alt="The manual's ten-color session system" style="width:100%;display:block;margin-bottom:8px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:0 0 32px;">Ten session colors, carried through every element tied to each session.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;"><strong>An icon language, not illustration.</strong> For the section openers, I chose a thin, dotted-line style rather than anything photographic or heavily rendered, a person curled on a mat, hands joined in a circle, a syringe drawn small and matter-of-fact. I didn't have the vocabulary at 23 to explain it this way, but I was instinctively avoiding two failure modes: sanitizing the subject into abstraction, or illustrating it like a warning poster aimed at the reader rather than a tool built for them. Line art let me show real, sometimes hard content without tipping into either extreme.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;"><strong>Designing the session, not just the page.</strong> I didn't just lay out content, I designed the session structure into the page itself. Each step got its own colored time-block (Step 1, 5 minutes; Step 2, 10 minutes), so a first-time facilitator with no additional training could run a session straight from the book. That was as much an instructional-design decision as a graphic one.</p>
+    </section>
+
+    <section id="sec-5" data-nav-title="Looking Back" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Looking Back, Twenty Years Later</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Looking at this now, two decades later, I'm struck by how much of it came from instinct rather than training. Concepts like typographic hierarchy or information density weren't part of my thinking yet, I was working by feel, by what seemed right for the people who'd actually use this book. The color system, the icon language, the session structure built directly into the layout, that instinct to build something warm and human around genuinely hard subject matter still feels exactly right to me today, and I'd trust it again without hesitation.</p>
+    </section>
+
+    <section id="sec-6" data-nav-title="The Note" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Note That Outlasted the Files</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">I lost most of the original project files years ago along with an old hard drive. What survives is a draft PDF and a handful of JPGs I'd emailed to the project director at the time, and, tucked into that same inbox thread, her response after seeing the design for the first time:</p>
+    </section>
+
+    <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:32px;line-height:normal;color:#000080;text-align:center;max-width:640px;margin:80px auto;padding:0;">"I am so so pleased to see this version of the manual, what fine work, true work of art, I can't help but keep smiling. A lot of hard work must have gone into the design and layout which is very bright, lively and colorful, something people would be happy to use and read."</blockquote>
+
+    <section style="padding-top:0;">
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">That note has survived everything else from this project. It's one of the earliest pieces of proof I have that design done carefully, even by someone very young and very early in their career, can genuinely move people.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-Newspapers.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Redesigning Bangladesh's Two Biggest Newspapers</a>
+      <a href="index.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">Back to Home →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false, pdfPage: 1, pdfPageCount: null, pdfStatus: 'loading' };
+  pdfCanvasRef = React.createRef();
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+    this.loadPdfDoc();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  loadPdfDoc() {
+    const start = () => {
+      if (!window.pdfjsLib) { setTimeout(start, 150); return; }
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      window.pdfjsLib.getDocument('uploads/1stDraft_PeerEduacatorManual_En.pdf').promise.then((pdf) => {
+        this._pdf = pdf;
+        this.setState({ pdfPageCount: pdf.numPages, pdfStatus: 'ready' }, () => this.renderPdfPage(1));
+      }).catch(() => this.setState({ pdfStatus: 'error' }));
+    };
+    start();
+  }
+  renderPdfPage(n) {
+    if (!this._pdf || !this.pdfCanvasRef.current) return;
+    this._pdf.getPage(n).then((page) => {
+      const canvas = this.pdfCanvasRef.current;
+      const containerWidth = canvas.parentElement.clientWidth || 680;
+      const baseViewport = page.getViewport({ scale: 1 });
+      const scale = containerWidth / baseViewport.width;
+      const viewport = page.getViewport({ scale });
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      const ctx = canvas.getContext('2d');
+      page.render({ canvasContext: ctx, viewport });
+    });
+  }
+  nextPdfPage = () => {
+    const n = Math.min((this.state.pdfPage || 1) + 1, this.state.pdfPageCount || 1);
+    this.setState({ pdfPage: n }, () => this.renderPdfPage(n));
+  };
+  prevPdfPage = () => {
+    const n = Math.max((this.state.pdfPage || 1) - 1, 1);
+    this.setState({ pdfPage: n }, () => this.renderPdfPage(n));
+  };
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      navLabel: this.state.isMobile ? 'CARE Bangladesh' : 'Designing for CARE Bangladesh',
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%',
+      pdfCanvasRef: this.pdfCanvasRef,
+      prevPdfPage: this.prevPdfPage,
+      nextPdfPage: this.nextPdfPage,
+      pdfPage: this.state.pdfPage || 1,
+      pdfPageCount: this.state.pdfPageCount || '\u2026',
+      pdfLoading: this.state.pdfStatus !== 'ready',
+      pdfReady: this.state.pdfStatus === 'ready',
+      pdfError: this.state.pdfStatus === 'error',
+      pdfNotError: this.state.pdfStatus !== 'error',
+      pdfCanvasDisplay: this.state.pdfStatus === 'ready' ? 'block' : 'none',
+      prevDisabled: (this.state.pdfPage || 1) <= 1,
+      nextDisabled: (this.state.pdfPage || 1) >= (this.state.pdfPageCount || 1)
+    };
+  }
+}
+
+</script>
+</body>
+</html>

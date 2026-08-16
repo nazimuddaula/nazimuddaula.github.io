@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    image-slot::part(frame){background:transparent;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Ad-Tech · 2014–2017 · Co-Founder &amp; CEO</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">G&amp;R, Increasing the Product Horizon</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">After launching the ad network in 2011, it became clear fairly quickly that G&amp;R couldn't rely on a single product or platform, and that we needed real technological control over more of the pipeline.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/gr-horizon-cover.webp" alt="Presenting G&amp;R's multi-product approach at an event" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;margin:{{ coverBleedMargin }};display:block;">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">A blurry image with crystal memory of that time - our participation in any event was highlighting our multi product approach, under one hood.</p>
+
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="7">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="One Product Wasn't Enough" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Realizing One Product Wasn't Enough</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">After launching the ad network in 2011, it became clear fairly quickly that G&amp;R couldn't rely on a single product or platform. Ad tech, by nature, requires many different kinds of collaboration, publishers, advertisers, agencies, payment systems, and making that collaboration work smoothly meant we needed real technological control over more of the pipeline, not just the core ad-serving engine.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="Ad Manager" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Ad Manager: An Early, Costly Lesson</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">One of the earliest efforts in this direction was Ad Manager, a complete solution built for one of the biggest news platforms in Bangladesh. The idea was simple in principle: give the publisher the ability to run their own revenue engine directly, while our ad network sat underneath as backfill for whatever inventory went unsold.</p>
+
+      <img src="assets/gr-horizon-admanager.webp" alt="The minimalistic Ad Manager dashboard" style="width:100%;display:block;margin-bottom:20px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:-4px 0 20px;">The minimalistic design for Ad Manager - it only had the features those were important and useful.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">It didn't work the way we intended. The system collapsed under real volume, and the client didn't give us a second chance. Looking back, I think we were simply too young as a company to properly absorb a failure at that scale. Instead of confronting it head-on, we mostly tried to move past it quietly and refocus energy on the core platform.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="Birth of Joss" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Wallet Problem, and the Birth of Joss</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">In 2014, we introduced a wallet system inside our own ad network, mainly to handle internal transactions more smoothly. That decision made something obvious almost immediately: we needed a real, regulated payment system behind it, not something improvised.</p>
+
+      <div style="margin:0 0 20px;">
+        <dc-import name="Note" icon="link" text="That wallet eventually became JossPay, a story significant enough to have its own case study." links="{{ jossPayNoteLinks }}" hint-size="100%,40px"></dc-import>
+      </div>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">We started researching the regulatory landscape, but there weren't many local examples to learn from, and our own management took a long time to commit to a concrete direction. I personally spent a considerable amount of time on its documentation and concept development.</p>
+    </section>
+
+    <section id="sec-4" data-nav-title="A Brand Built on One Word" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">A Brand Built Around One Word</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Around this same period, G&amp;R started experimenting with a broader brand approach built around the word Joss, a Bangla expression that captures excitement and admiration. It became a kind of umbrella identity for a wave of new product attempts beyond the core ad network.</p>
+    </section>
+
+    <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:40px;line-height:normal;color:#000080;text-align:center;max-width:600px;margin:80px auto;padding:0;">"Joss, a Bangla expression that captures excitement and admiration."</blockquote>
+
+    <section id="sec-5" data-nav-title="JossWork" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">JossWork: The One That Should Have Worked</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">One of the more promising products to come out of this period was JossWork, a workspace tool built for small and medium businesses. We built a working MVP, and it actually got real traction, a handful of businesses, including G&amp;R itself, started using it internally for communication, attendance tracking, leave management, internal chat, and status updates.</p>
+
+      <img src="assets/gr-horizon-josswork-h.webp" alt="JossWork's unified layout across devices" style="width:100%;display:block;margin-bottom:8px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:0 0 20px;">A simple unified design structure for different kind of devices - same layout for general user to people managers.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Digital Attendance was the module people leaned on most. It logged everyone's entry and exit times automatically and rolled them up into a daily view, so anyone could check who was in right now, browse colleagues, and see total time at office at a glance, no manual sign-in sheet, no separate tool. Leaves, requests, and performance sat right alongside it in the same sidebar, so a manager could move between attendance and approvals without switching apps.</p>
+      <div style="float:left;width:280px;margin:0 32px 16px 0;">
+        <img src="assets/gr-horizon-josswork-v.webp" alt="JossWork's mobile interface" style="width:100%;display:block;">
+        <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">JossWork in action from a mobile interface</p>
+      </div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The timing behind it made sense. Bangladesh's tech and SME sector was growing fast, and most of these growing businesses were stitching together a patchwork of separate paid tools just to run basic internal operations, one for chat, another for attendance, another for leave requests, each with its own subscription and its own login. That fragmentation was expensive and clumsy, and it created a real opening: a single, affordably priced workspace that covered the essentials a small or mid-sized team actually needed day to day.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">It had genuine potential and real early acceptance. What it was missing wasn't product-market fit or user interest, it was clear direction from management. That gap eventually became the reason JossWork quietly died, despite everything pointing toward it being worth the investment.</p>
+      <div style="clear:both;"></div>
+    </section>
+
+    <section id="sec-6" data-nav-title="The Wider Experiments" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Wider Experiments</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Beyond JossPay and JossWork, we tried several other products during this period: JossDeal, TungTang, G&amp;R Mobile, BanglaMeme, among others. None of these were meant to replace the core ad business, the intent was always to complement it, to build a wider ecosystem around the thing that actually worked.</p>
+    </section>
+
+    <section id="sec-8" data-nav-title="Reimagining Goromcha" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reimagining Goromcha</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Somewhere in this same reaching-past-the-ad-network instinct, we circled back to Goromcha, the product we'd started the whole company with back in 2010, and gave it a real second life. This move complemented JossWork directly: JossWork was focused on the business domain, and to build awareness around that service and show what we were capable of, we needed a public-facing email offering to put our name in front of everyday users.</p>
+
+      <div style="float:left;width:280px;margin:0 32px 16px 0;">
+        <img src="assets/gr-horizon-goromcha-v.webp" alt="The relaunched Goromcha logo" style="width:100%;display:block;">
+        <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">Goromcha, relaunched, with a little bit different branding approach but keeping the root same</p>
+      </div>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Rather than just refreshing the destination site, we rebuilt it around a model closer to what Yahoo had done: a content platform paired with its own email service, so a Bangladeshi user had one identity for reading local content and for communicating, both under the same roof.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The core focus never moved, it was still a local website first, but the shape of it grew. Even the email product got a name rooted in Bangla, the same instinct that had shaped Goromcha's identity from day one.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">This wasn't a small side project, it was one of the bigger initiatives we took on during this whole period, touching product, engineering, and brand all at once. We rebuilt the platform's information architecture from the ground up and stood up entirely new infrastructure to run two very different kinds of products side by side, content delivery and real-time mail, under one account system.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Alongside that, we rebranded Goromcha itself, moving its identity away from a single destination site toward a more flexible mark, one that could sit across a content platform, an email service, and whatever we adapted it to serve next.</p>
+      <div style="clear:both;"></div>
+
+      <img src="assets/gr-horizon-goromcha-h.webp" alt="The Goromcha rebrand announcement email" style="width:100%;display:block;margin:20px 0;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:-4px 0 0;">One of my most favorite announcement ever - to let our user know about the new approach of Goromcha. A letter posted in the inbox.</p>
+    </section>
+
+    <section id="sec-9" data-nav-title="A Voice for Genex" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">A Voice for Genex</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Toward the close of this chapter, some of my attention shifted toward Genex, G&amp;R's parent company, and helping it build better brand visibility as it prepared for what came next. Genex had always been the name behind the name, well known inside the group but with almost no public identity of its own, and that started to matter as the company's ambitions grew. I worked closely on its social media strategy, shaping how it introduced itself to an audience that, until then, had mostly known it only through G&amp;R.</p>
+      <div style="float:left;width:280px;margin:0 32px 16px 0;">
+        <img src="assets/gr-horizon-genex-v.webp" alt="The Bangla mark designed for Genex" style="width:100%;display:block;">
+        <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The Bangla mark I designed for Genex - maybe one of the best of this time.</p>
+      </div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The piece I'm proudest of from this window is a Bangla version of the Genex logo I designed, a mark the company still uses today as a core branding asset. Giving the identity a Bangla expression felt consistent with everything else I'd worked on across G&amp;R, a company built in Bangladesh should be able to speak in its own language, visually as much as in words.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Our team also put together Genex's brand guideline, the first real reference document defining how the identity should be used consistently across every touchpoint, logo usage, color, typography, tone, so the brand could scale beyond whatever any one of us happened to remember at the time.</p>
+      <div style="clear:both;"></div>
+    </section>
+
+    <section id="sec-7" data-nav-title="Closing This Chapter" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Closing This Chapter</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Looking back at this whole period, the pattern is fairly clear. G&amp;R kept reaching past the ad network, sometimes too early, sometimes without the internal discipline to see a good idea through, but always with the same underlying instinct: that a single product, however successful, wasn't going to be enough to build something lasting.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Some of these bets failed outright, like Ad Manager. Some had real promise but died from a lack of direction, like JossWork. And one, JossPay, took so long to clear regulatory ground that by the time it could launch, the market had already moved past it. None of them were wasted, though. Every one of these attempts shaped how the company thought about its own future, and set the stage for what came next: G&amp;R's path toward acquisition and IPO.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-GR-IPO.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← G&amp;R, Taking to IPO</a>
+      <a href="Case-Study-GR.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">G&amp;R, Building the Ad Network →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      navLabel: this.state.isMobile ? 'G&R Horizon' : 'G&R, Increasing the Product Horizon',
+      jossPayNoteLinks: [{ label: 'Read the JossPay case study', url: 'Case-Study-JossPay.dc.html' }],
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+</script>
+</body>
+</html>

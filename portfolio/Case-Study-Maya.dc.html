@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Health Tech · Dec 2019–Dec 2020 · Chief Product Officer</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Redesigning Maya</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">A digital health, psychosocial, and legal advisory platform with 3M+ monthly active users, bringing process discipline to a website redesign and Maya's first iOS app, shipped in 90 days.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/maya-cover.webp" alt="The redesigned Maya website and iOS app" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;margin:{{ coverBleedMargin }};display:block;">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">Maya was a popular platform providing free advice on health and well-being. The iOS app brought an improved experience and extended services.</p>
+  
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="About Maya" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">About Maya</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Maya is a Bangladesh-based technology company offering digital advisory on health, psychosocial, and legal issues. When I joined, it had grown to more than 3 million monthly active users, one of the most trusted platforms in the country for free, anonymous expert consultation. The goal was ambitious: to become everyone's personal digital wellbeing assistant across developing countries.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">As CPO, my main focus was bringing discipline to how the team worked, building process where instinct had carried things before. Two major deliveries came out of that: a new company website, and Maya's first iOS app.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="The Website" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Website: Serving Two Audiences at Once</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">95% of Maya's traffic was mobile, local users seeking consultation services. The remaining 5%, mostly overseas desktop visitors, were investors and partners trying to evaluate Maya as a company. Small in volume, critical for raising investment and expanding reach.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">I led a small team through a redesign built around a simple rule: show the right thing to the right audience. Using the fact that Maya's services were location-specific, we showed the company profile to regions where services weren't available, and kept the familiar interface for existing users. It let us serve both audiences without compromising either.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">I also built the underlying structure needed to support this: a brand style guide, a responsive layout grid, and a content process pulling material from across the company for the first time. I designed every page myself, desktop and mobile.</p>
+      <div style="margin-top:20px;">
+        <dc-import name="Note" icon="external" text="The design project is still available as a public XD file." links="{{ xdNoteLinks }}" hint-size="100%,40px"></dc-import>
+      </div>
+      <img src="assets/maya-website.webp" alt="The redesigned Maya website" style="width:100%;margin-top:32px;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">A plain, simple structure to showcase the big picture. The homepage of the redesigned Maya website.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="The iOS App, in 90 Days" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The iOS App: 90 Days, No iOS Developer, Full Lockdown</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Maya's Android app had over a million downloads. iOS was untested territory, but investor pressure made it necessary. We had no iOS developer on the team, and I took it on anyway with a 90-day target, entirely remote.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 24px;">I designed the key screens first to give the project a concrete target, brought in an external partner and developer I already trusted, and pulled one engineer to stay on standby for technical support. I ran delivery screen by screen, with daily team calls carrying most of the coordination weight that office proximity normally would have. Video calling through a third-party framework was new to us, so the whole team stayed in near-constant communication to keep pace.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">We also built a proper measurement framework for the first time, mapping the full user journey step by step so we could see exactly where people dropped off, and use that to prioritize what to fix first.</p>
+
+      <img src="assets/maya-ios-userflow.webp" alt="The Maya iOS app user flow" style="width:100%;margin-bottom:8px;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:0 0 24px;">The user flow mapped out to plan how we'd measure drop-off at every step.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The home screen carried over Maya's existing service categories, keeping the new iOS app immediately familiar to anyone coming from Android.</p>
+      <img src="assets/maya-ios-home.webp" alt="The Maya iOS app home screen" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">Every design here was meant to define a single interaction in the Maya iOS app.</p>
+    </section>
+
+    <section id="sec-4" data-nav-title="Launch" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Launch</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Getting the app out the door meant a fair bit of back and forth with Apple's review process, and Covid slowed down plenty of things that would normally move faster, but we still landed the launch close to plan. It became part of Maya's international PR push shortly after, and fed directly into a funding pitch that closed not long after that.</p>
+      <div style="margin-top:20px;">
+        <dc-import name="Note" icon="external" text="Maya's next round was featured on TechCrunch." links="{{ techcrunchNoteLinks }}" hint-size="100%,40px"></dc-import>
+      </div>
+    </section>
+
+    <section id="sec-5" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reflection</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Both projects asked for the same thing in different forms: less improvisation, more structure. The website needed discipline in how content and brand decisions got made. The iOS app needed discipline in how a distributed team stayed accountable to a hard deadline with a partner nobody else on the team had worked with before. That's the thread that connects them.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-Chaldal-Brand.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Chaldal, Head of Brand and Communication</a>
+      <a href="Case-Study-Deligram.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">Deligram's Mobile-First Approach →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+    }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      challengeGridCols: this.state.isMobile ? '1fr' : 'minmax(0,1fr) minmax(0,1fr)',
+      challengeGap: this.state.isMobile ? '24px' : '48px',
+      challengesBoxStyle: this.state.isMobile ? 'padding-bottom:24px;border-bottom:1px solid var(--rule);' : '',
+      solutionsBoxStyle: this.state.isMobile ? '' : 'padding-left:48px;border-left:1px solid var(--rule);',
+      navLabel: this.state.isMobile ? 'Maya' : 'Redesigning Maya',
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%',
+      techcrunchNoteLinks: [{ label: 'Read the TechCrunch feature', url: 'https://techcrunch.com/2021/02/08/bangladesh-based-maya-a-startup-focused-on-accessible-healthcare-raises-2-2-million-seed-round/' }],
+      xdNoteLinks: [{ label: 'View the XD design file', url: 'https://xd.adobe.com/view/6c61419b-a25a-42a2-9d79-304aff675840-3932/' }]
+    };
+  }
+}
+</script>
+</body>
+</html>

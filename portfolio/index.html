@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&family=Offside&family=Over+the+Rainbow&display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5">
+      <circle cx="12" cy="12" r="10"></circle>
+      <circle cx="9" cy="10" r="1" fill="var(--ink)"></circle>
+      <circle cx="15" cy="10" r="1" fill="var(--ink)"></circle>
+      <path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path>
+    </svg>
+    <div style="display:flex;gap:32px;font-size:12px;">
+      <a href="#work" style-hover="text-decoration:underline;">Work</a>
+      <a href="#now" style-hover="text-decoration:underline;">Now</a>
+      <a href="#scrapbook" style-hover="text-decoration:underline;">Scrapbook</a>
+    </div>
+  </nav>
+
+  <header style="position:relative;overflow:hidden;min-height:560px;padding:clamp(64px,10vw,120px) 0 96px;box-sizing:border-box;">
+    <img src="uploads/MN-Hero-04.gif" alt="" style="position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+    <div style="max-width:1160px;margin:0 auto;padding:0 clamp(24px,6vw,64px);position:relative;">
+      <div style="max-width:640px;position:relative;z-index:1;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:24px;">Senior UI/UX Designer, 16+ Years</div>
+        <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 32px;">Muhammad<br>Nazimuddaula</h1>
+        <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;max-width:640px;margin:0;">I'm a human being, <span style="background:var(--ink);color:var(--paper);box-decoration-break:clone;-webkit-box-decoration-break:clone;">specialized in design, communication, and direction. Two decades in design, sixteen of them full-time, from print, to websites and mobile apps, to now translating robotic and technical behavior into coherent user experience.</span></p>
+      </div>
+    </div>
+  </header>
+
+  <section id="now" style="padding:64px clamp(24px,6vw,64px);border-top:1px solid var(--rule);">
+    <div style="max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;">
+      <div style="flex:1 1 240px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Now</div>
+        <div style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;line-height:normal;margin-bottom:4px;">Senior UI/UX Designer at Neura Robotics</div>
+        <div style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin-bottom:4px;">Metzingen, Germany</div>
+        <div style="font-family:'Offside',sans-serif;font-size:12px;color:var(--muted);">Since Oct 2024</div>
+      </div>
+      <p style="font-family:'Over the Rainbow',cursive;font-size:clamp(22px,4.5vw,40px);line-height:1.3;text-align:center;margin:0;flex:1 1 280px;max-width:600px;color:#000080;">&ldquo;I design how people and robots read each other, knowing when the machine should just act, and when it should hand control back.&rdquo;</p>
+    </div>
+  </section>
+
+  <section id="work" style="padding:64px clamp(24px,6vw,64px) 32px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Work</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;max-width:640px;margin:0 0 40px;">Design was never just a profession to me, it's a lifestyle I've been living since I stepped into design school in 2001. I have many stories and countless examples where I tried to put my design skills to use. What follows isn't the best of it, but maybe these are a few milestones.</p>
+
+      <div style="border-bottom:1px solid var(--rule);margin:{{ workListMargin }};">
+        <a href="Case-Study-Neura.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#0D9488;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">01</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">&#8756;&#10209;&#976; &#9004; &#129302;&#129438;&#129302; &#65124;&#1606;&#1608;&#1645;&#1641; &#12963;&#12963;</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Senior UI/UX Designer &middot; details under NDA with Neura</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2024&ndash;</span>
+        </a>
+
+        <a href="Case-Study-KONA.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#7C3AED;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">02</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Cross-Border Wallet for KONA</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Product Director &middot; a planned cross-border financial product for migrant workers</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2024</span>
+        </a>
+
+        <a href="Case-Study-Chaldal.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#E4572E;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">03</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Chaldal, Head of Product</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Year in Review, Chaldal Pay, Referral Program, and Egg Club</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2021</span>
+        </a>
+
+        <a href="Case-Study-Chaldal-Brand.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#0891B2;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">04</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Chaldal, Head of Brand and Communication</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">TV drama, national campaigns, customer service, and packaging redesign</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2023</span>
+        </a>
+
+        <a href="Case-Study-Maya.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#059669;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">05</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Redesigning Maya</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Chief Product Officer &middot; website redesign and a 90-day iOS app for a health-tech platform</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2019&ndash;20</span>
+        </a>
+
+        <a href="Case-Study-Deligram.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#DB2777;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">06</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Deligram's Mobile-First Approach</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Head of Product Design &middot; one unified experience for omnichannel retail, in a week</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2019</span>
+        </a>
+
+        <a href="Case-Study-GR-IPO.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#4338CA;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">07</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">G&amp;R, Taking to IPO</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Co-Founder &amp; CEO &middot; more coming soon</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2017&ndash;18</span>
+        </a>
+
+        <a href="Case-Study-GR-Horizon.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#65A30D;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">08</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">G&amp;R, Increasing the Product Horizon</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Co-Founder &amp; CEO &middot; more coming soon</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2015&ndash;17</span>
+        </a>
+
+        <a href="Case-Study-GR.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#2563EB;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">09</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">G&amp;R, Building the Ad Network</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Co-Founder &amp; Art Director &middot; Goromcha, and inventing Bangladesh's first ad-tech market</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2009&ndash;14</span>
+        </a>
+
+        <a href="Case-Study-JossPay.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#7C3AED;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">10</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">JossPay, the Wallet</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">A licensed digital wallet, and my favorite failure</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2015&ndash;17</span>
+        </a>
+
+        <a href="Case-Study-Lekhok.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#0D9488;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">11</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Lekhok Keyboard</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">A personal project: a non-phonetic Bangla keyboard</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2014&ndash;15</span>
+        </a>
+
+        <a href="Case-Study-Robi.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#0369A1;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">12</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">The Robi Bangla Font</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Personal project, with Tirana &middot; a Bangla typeface for Robi's 2010 rebrand from Aktel</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2010</span>
+        </a>
+
+        <a href="Case-Study-Newspapers.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#D97706;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">13</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Redesigning Bangladesh's Two Biggest Newspapers</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">The Daily Star and Prothom Alo, taken digital in English and Bangla</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2007&ndash;09</span>
+        </a>
+
+        <a href="Case-Study-CARE.dc.html" style="display:grid;grid-template-columns:{{ workGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:{{ workRowPadding }};border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background:#BE185D;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">14</span>
+          <div>
+            <h3 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0 0 4px;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Designing for CARE Bangladesh</h3>
+            <p style="font-size:12px;margin:0;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">Volunteer &amp; Design Consultant &middot; a peer educator training manual for CARE's HIV Program</p>
+          </div>
+          <span style="font-size:12px;white-space:nowrap;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">2007&ndash;09</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="scrapbook" style="padding:64px clamp(24px,6vw,64px) 96px;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Scrapbook</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;max-width:640px;margin:0 0 32px;">Experiments that never quite became businesses. None of them proved themselves out, but all of them are favorites.</p>
+      <div style="border-bottom:1px solid var(--rule);margin:{{ workListMargin }};">
+        <a href="Scrapbook-Lokofo.dc.html" style="display:grid;grid-template-columns:{{ scrapGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:24px;border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background-image:repeating-linear-gradient(45deg, var(--ink) 0 8px, #0D9488 8px 16px);--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">01</span>
+          <h4 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Lokofo</h4>
+          <p style="font-size:12px;color:var(--rowhover, var(--muted));margin:0;transition:color 0.2s ease;">The local website, hyperlocal news and listings for a neighborhood, not a nation.</p>
+        </a>
+        <a href="Scrapbook-AjkerWeather.dc.html" style="display:grid;grid-template-columns:{{ scrapGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:24px;border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background-color:var(--ink);background-image:radial-gradient(#D97706 2.5px, transparent 2.5px);background-size:14px 14px;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">02</span>
+          <h4 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">AjkerWeather</h4>
+          <p style="font-size:12px;color:var(--rowhover, var(--muted));margin:0;transition:color 0.2s ease;">A 2011 fun project: human-generated weather updates, collected by people instead of sensors.</p>
+        </a>
+        <a href="Scrapbook-FooRun.dc.html" style="display:grid;grid-template-columns:{{ scrapGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:24px;border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background-color:var(--ink);background-image:linear-gradient(45deg, #7C3AED 25%, transparent 25%, transparent 75%, #7C3AED 75%), linear-gradient(45deg, #7C3AED 25%, transparent 25%, transparent 75%, #7C3AED 75%);background-size:16px 16px;background-position:0 0, 8px 8px;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">03</span>
+          <h4 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Foo.run</h4>
+          <p style="font-size:12px;color:var(--rowhover, var(--muted));margin:0;transition:color 0.2s ease;">The Bangla URL shortener, with an earning model still on the roadmap.</p>
+        </a>
+        <a href="Scrapbook-Alap.dc.html" style="display:grid;grid-template-columns:{{ scrapGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:24px;border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background-color:var(--ink);background-image:repeating-linear-gradient(0deg, #DB2777 0 2px, transparent 2px 12px), repeating-linear-gradient(90deg, #DB2777 0 2px, transparent 2px 12px);--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">04</span>
+          <h4 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Alap</h4>
+          <p style="font-size:12px;color:var(--rowhover, var(--muted));margin:0;transition:color 0.2s ease;">A platform to discuss important issues, deliberately, no images allowed.</p>
+        </a>
+        <a href="Scrapbook-SatzFuerSatz.dc.html" style="display:grid;grid-template-columns:{{ scrapGridCols }};gap:{{ workRowGap }};align-items:{{ workAlign }};padding:24px;border-top:1px solid var(--rule);transition:background-color 0.2s ease;" style-hover="background-color:var(--ink);background-image:repeating-linear-gradient(to bottom, transparent 0 9px, #DC2626 9px 10px);background-size:100% 30px;--rowhover:var(--paper);">
+          <span style="font-family:'Offside';font-size:12px;color:var(--rowhover, var(--muted));transition:color 0.2s ease;">05</span>
+          <h4 style="font-family:'Offside',sans-serif;font-size:16px;font-weight:500;margin:0;color:var(--rowhover, var(--ink));transition:color 0.2s ease;">Satz f&uuml;r Satz</h4>
+          <p style="font-size:12px;color:var(--rowhover, var(--muted));margin:0;transition:color 0.2s ease;">A German-learning journey, handwritten notes and doodles shared as small posts.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);">
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer &middot; Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">&copy; 2009&ndash;2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I&rsquo;ve worked for.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+  handleResize = () => { this.setState({ isMobile: window.innerWidth < 640 }); };
+  renderVals() {
+    const isMobile = this.state.isMobile;
+    return {
+      workListMargin: isMobile ? '0 -24px' : '0',
+      workRowPadding: isMobile ? '24px' : '32px 24px',
+      workRowGap: isMobile ? '6px' : '32px',
+      workGridCols: isMobile ? '1fr' : '40px minmax(0,1fr) auto',
+      workAlign: isMobile ? 'start' : 'center',
+      scrapGridCols: isMobile ? '1fr' : '40px minmax(0,1fr) minmax(0,2fr)',
+    };
+  }
+}
+</script>
+</body>
+</html>

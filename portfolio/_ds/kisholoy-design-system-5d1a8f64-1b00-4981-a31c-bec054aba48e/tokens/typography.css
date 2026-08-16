@@ -1,0 +1,75 @@
+/* Kisholoy — type tokens.
+   CORE FOUNDATIONAL RULE (do not violate):
+   Kisholoy ships in 2 languages (Bangla, English) and carries 2 kinds
+   of content — System/UI content (nav labels, buttons, headers, form
+   labels, system notices) and User-Generated Content / UGC (posts,
+   discussions, comments, AI-chat messages — anything authored by a
+   person). Each language × content-type pair gets its own typeface:
+
+       English UI  → Google Sans        (--font-ui-en)
+       English UGC → Noto Serif         (--font-ugc-en)
+       Bangla  UI  → Noto Sans Bengali  (--font-ui-bn)
+       Bangla  UGC → Noto Serif Bengali (--font-ugc-bn)
+
+   Components should reference the LANGUAGE-AGNOSTIC semantic tokens
+   --font-ui / --font-ugc, which resolve to the *-bn variants by
+   default and swap to the *-en variants under `[lang="en"]` (see
+   tokens/colors.css-adjacent root block below). Never hardcode
+   "Noto Serif Bengali" etc. directly in a component — always go
+   through --font-ui / --font-ugc so language-switching works.
+
+   FONT SIZE RULE: 10px is the floor. Every font size in the system
+   must be an EVEN number (10, 12, 14, 16...) — never 9, 11, 13, etc.
+   If a design value violates this, round to the NEAREST allowed even
+   value ≥10 (ties round up, e.g. 11px → 12px). This is enforced in
+   the scale below and must be honored in one-off styles too. */
+
+:root {
+  /* ---- Literal per-language-per-content-type families ---- */
+  --font-ui-en: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-ugc-en: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-ui-bn: "Noto Sans Bengali", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-ugc-bn: "Noto Serif Bengali", ui-serif, Georgia, "Times New Roman", serif;
+
+  /* ---- Semantic, language-agnostic tokens — USE THESE in components ---- */
+  --font-ui: var(--font-ui-bn);    /* default language: Bangla */
+  --font-ugc: var(--font-ugc-bn);
+}
+
+/* Flip to the English pair by setting lang="en" (or class "lang-en")
+   on any ancestor — html, a screen root, or a single content block. */
+:root[lang="en"], .lang-en {
+  --font-ui: var(--font-ui-en);
+  --font-ugc: var(--font-ugc-en);
+}
+
+:root {
+  /* ---- Type scale — every value even, 10px floor. Never snapped to
+     a 4/8px grid beyond that; these are the file's real reading sizes. ---- */
+  --text-4xl: 36px;  /* forum article headline */
+  --text-3xl: 30px;  /* splash/onboarding cover titles */
+  --text-2xl: 24px;  /* section headers ("সহায়তা", "নতুন আলাপ শুরু করুন") */
+  --text-xl: 20px;   /* login CTA, OTP digits, splash tagline */
+  --text-lg: 16px;   /* body copy, buttons, input values */
+  --text-base: 14px; /* nav labels, secondary buttons, tab labels */
+  --text-sm: 12px;   /* field labels, engagement counts, chips, fine print */
+  --text-xs: 10px;   /* nav bar labels, timestamps — the system floor */
+
+  --leading-tight: 100%;
+  --leading-snug: 1.2;   /* 20px/24px */
+  --leading-normal: 1.25; /* 16px/20px body copy */
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-bold: 700;
+}
+
+/* ---- Admin dashboard numerals — SCOPED EXCEPTION to the foundational
+   rule above. Google Sans Code, used ONLY to render numeric values
+   (metrics, counts, table figures, currency) in admin/back-office
+   dashboards, so figures line up consistently at a glance. Never use
+   --font-admin-numeric for labels, body copy, buttons, or any Bangla
+   content — those still go through --font-ui / --font-ugc. ---- */
+:root {
+  --font-admin-numeric: "Google Sans Code", ui-monospace, "SF Mono", Menlo, monospace;
+}

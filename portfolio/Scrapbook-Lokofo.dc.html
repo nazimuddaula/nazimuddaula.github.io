@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&family=Offside&family=Over+the+Rainbow&display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#0D9488;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);">Scrapbook, Lokofo</span>
+  </nav>
+
+  <div style="position:relative;width:100%;box-sizing:border-box;height:{{ collageHeight }};display:flex;align-items:center;justify-content:center;padding:{{ collagePadding }};background:radial-gradient(circle at 15% 20%, rgba(13,148,136,0.08), transparent 40%), radial-gradient(circle at 85% 75%, rgba(217,119,6,0.08), transparent 40%);overflow:hidden;">
+    <div style="position:relative;width:100%;max-width:1100px;margin:0 auto;">
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:32px;">
+        <div style="position:relative;width:100%;transform:rotate(-1.5deg);">
+          <div style="position:absolute;top:-12px;left:50%;width:52px;height:20px;background:#F5E6A8;opacity:0.85;transform:translateX(-50%) rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.15);">
+            <img src="assets/lokofo-1.png" alt="Lokofo local directory admin dashboard" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:100%;transform:rotate(1.5deg);">
+          <div style="position:absolute;top:-12px;left:20%;width:48px;height:18px;background:var(--accent);opacity:0.8;transform:rotate(3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-2.webp" alt="Lokofo listings page" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;">
+          <div style="background:#FFFFFF;border-radius:50%;padding:8px;box-shadow:0 8px 18px rgba(0,0,0,0.18);transform:rotate(-4deg);">
+            <img src="assets/lokofo-3.webp" alt="Lokofo detail" style="width:104px;height:104px;object-fit:cover;border-radius:50%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:100%;transform:rotate(-1deg);">
+          <div style="position:absolute;top:-12px;left:60%;width:48px;height:18px;background:#EAB308;opacity:0.85;transform:rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-4.png" alt="Login screen for the Lokofo admin" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:70%;margin:0 auto;transform:rotate(2deg);">
+          <div style="position:absolute;top:-10px;right:20%;width:42px;height:16px;background:#BE185D;opacity:0.55;transform:rotate(4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 18px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-5.webp" alt="Lokofo detail" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:100%;transform:rotate(1deg);">
+          <div style="position:absolute;top:-12px;left:30%;width:48px;height:18px;background:#D97706;opacity:0.6;transform:rotate(-4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-6.webp" alt="Lokofo print ad" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:70%;margin:0 auto;transform:rotate(-2deg);">
+          <div style="position:absolute;top:-10px;left:20%;width:42px;height:16px;background:var(--accent);opacity:0.7;transform:rotate(3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 18px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-7.webp" alt="Lokofo detail" style="width:100%;display:block;">
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative;display:flex;align-items:flex-start;justify-content:center;gap:0;">
+        <div style="position:absolute;top:-14px;left:4%;width:90px;height:70px;background:#EAB308;opacity:0.55;transform:rotate(-8deg);z-index:0;"></div>
+        <div style="position:absolute;bottom:-10px;right:6%;width:100px;height:80px;background:var(--accent);opacity:0.35;transform:rotate(6deg);z-index:0;"></div>
+
+        <div style="position:relative;width:52%;transform:rotate(-3deg);z-index:2;">
+          <div style="position:absolute;top:-14px;left:50%;width:60px;height:24px;background:#F5E6A8;opacity:0.85;transform:translateX(-50%) rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:12px 12px 30px;box-shadow:0 10px 26px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-1.png" alt="Lokofo local directory admin dashboard" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <div style="position:relative;width:32%;margin-left:-7%;margin-top:64px;transform:rotate(4deg);z-index:3;">
+          <div style="position:absolute;top:-12px;right:14%;width:50px;height:20px;background:var(--accent);opacity:0.8;transform:rotate(4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 26px;box-shadow:0 10px 24px rgba(0,0,0,0.18);">
+            <img src="assets/lokofo-2.webp" alt="Lokofo listings page" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <div style="position:relative;width:18%;margin-left:-4%;margin-top:20px;transform:rotate(-4deg);z-index:2;">
+          <div style="position:absolute;top:-10px;left:20%;width:40px;height:16px;background:#D97706;opacity:0.6;transform:rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 20px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-6.webp" alt="Lokofo print ad" style="width:100%;display:block;">
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative;display:flex;align-items:flex-end;justify-content:center;margin-top:28px;">
+        <div style="position:absolute;top:10%;left:22%;width:60px;height:2px;background:#D97706;opacity:0.5;transform:rotate(-16deg);z-index:0;"></div>
+
+        <div style="position:relative;width:120px;flex-shrink:0;transform:translateY(-18px) rotate(-6deg);z-index:3;margin-right:-24px;">
+          <div style="background:#FFFFFF;border-radius:50%;padding:8px;box-shadow:0 8px 18px rgba(0,0,0,0.18);">
+            <img src="assets/lokofo-3.webp" alt="Lokofo detail" style="width:104px;height:104px;object-fit:cover;border-radius:50%;display:block;">
+          </div>
+        </div>
+
+        <div style="position:relative;width:32%;z-index:2;transform:rotate(2deg);">
+          <div style="position:absolute;top:-12px;left:16%;width:52px;height:20px;background:#EAB308;opacity:0.85;transform:rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 26px;box-shadow:0 8px 20px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-4.png" alt="Login screen for the Lokofo admin" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <div style="position:relative;width:18%;margin-left:-5%;margin-top:32px;transform:rotate(-3deg);z-index:3;">
+          <div style="position:absolute;top:-12px;right:20%;width:44px;height:18px;background:#BE185D;opacity:0.55;transform:rotate(5deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 20px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-5.webp" alt="Lokofo detail" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <div style="position:relative;width:16%;margin-left:-4%;margin-top:8px;transform:rotate(3deg);z-index:2;">
+          <div style="position:absolute;top:-10px;left:22%;width:40px;height:16px;background:var(--accent);opacity:0.7;transform:rotate(3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 20px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/lokofo-7.webp" alt="Lokofo detail" style="width:100%;display:block;">
+          </div>
+        </div>
+      </div>
+    </sc-if>
+    </div>
+  </div>
+
+  <header style="max-width:640px;margin:0 auto;padding:56px clamp(24px,6vw,32px) 96px;text-align:center;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Scrapbook</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 16px;">Lokofo, the Local Website</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Hyperlocal news and listings for a neighborhood, not a nation, an experiment in making "local" mean a few streets, not a whole city.</p>
+  </header>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="index.html#scrapbook" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">&larr; Back to Scrapbook</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer &middot; Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">&copy; 2009&ndash;2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I&rsquo;ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+  handleResize = () => { this.setState({ isMobile: window.innerWidth < 640 }); };
+  renderVals() {
+    return {
+      isMobile: this.state.isMobile,
+      isDesktop: !this.state.isMobile,
+      collagePadding: this.state.isMobile ? '48px clamp(24px,6vw,64px) 24px' : '64px clamp(24px,6vw,64px) 40px',
+      collageHeight: this.state.isMobile ? 'auto' : '740px'
+    };
+  }
+}
+</script>
+</body>
+</html>

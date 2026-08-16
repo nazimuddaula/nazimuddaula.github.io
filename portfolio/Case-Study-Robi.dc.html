@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Type Design · 2010 · Personal Project, with Tirana</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">The Robi Bangla Font</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">A Bangla typeface my friend Tirana and I designed for Robi's 2010 rebrand from Aktel, one of the most expensive rebranding campaigns in Bangladesh's history at the time. It's flawed, and it's still one of the things I'm proudest of.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/robi-cover.webp" alt="The Robi Bangla font glyph set in a type design app, with a preview line reading 'Your Aktel is now Robi'" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The font Tirana and I built for Robi's 2010 rebrand, quietly present across the whole country within days of launch.</p>
+
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="7">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="Before the Font" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Before the Font</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Tirana and I were classmates from 2001, our names sat next to each other on the attendance sheet the entire time. Like most people in graphic design, we both had to make peace with typography, and for those of us a little more drawn to it, that peace turned into something closer to obsession. That's likely where our early collaborations came from, working on type together long before either of us knew where it would lead.</p>
+    </section>
+
+    <section id="sec-2" data-nav-title="Saying Yes First" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">An Answer Given Before Understanding the Question</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">In 2010, a friend asked if I could take on designing a Bangla font for Robi, one of Bangladesh's largest telecom brands, mid-rebrand from Aktel. I said yes before I fully understood what I was agreeing to.</p>
+
+      <img src="assets/robi-firstdraft-h.webp" alt="Tirana's first draft of the Robi font" style="width:100%;display:block;margin-bottom:20px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 32px;">Tirana's first draft of the font.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 32px;">Tirana made the first draft. It's remarkable, looking back, how closely that early sketch resembled what actually shipped. A working test version was ready within weeks. Everything about the project was confidential, so once we sent it off, there was nothing to do but wait. We couldn't even ask whether Robi would use it.</p>
+
+      <img src="assets/robi-title-h.webp" alt="One of the first titles set in the new font" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">One of the first titles we set in the new font.</p>
+    </section>
+
+    <section id="sec-3" data-nav-title="Seeing It Live" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Seeing It Before It Was Announced</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The rebrand was set to go public later that year, one of the most expensive rebranding campaigns in Bangladesh's history at the time. I expected to first see the new identity in the morning papers or on TV. Instead, the night before, walking home through Jigatola, I saw it already on a sign: the word for "service," set in the font we'd built. Every curve, every stroke weight, every vowel mark sat exactly how we'd drawn it, that was ours, and there it was, already living in the world before anyone had officially announced it.</p>
+
+      <img src="assets/robi-signage-h.webp" alt="Robi service signage being installed at night in Jigatola" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The word for "service," spotted on a sign in Jigatola the night before the rebrand was officially announced.</p>
+    </section>
+
+    <section id="sec-4" data-nav-title="The Work Itself" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">The Work Itself</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">From first sketch to usable delivery, the core work took about 30 days. Half of those nights I didn't sleep. The three months after that went into solving the practical problems that only show up once a typeface actually has to function: how small can it go before it breaks, what happens when it's blown up on a banner. We had zero prior experience pricing this kind of work, and negotiating payment with Robi became its own real education. When the cheque finally arrived, I photographed it more times than I'd like to admit and kept it for days before depositing it, it felt closer to an autograph than a payment.</p>
+
+      <img src="assets/robi-fonttable-h.webp" alt="The Robi font's full character table" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The font's full character table.</p>
+    </section>
+
+    <section id="sec-5" data-nav-title="Living With Its Flaws" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Living With Its Flaws</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The font isn't perfect, and I don't pretend otherwise. Some of the mistakes are serious enough that I still feel a flicker of discomfort seeing them in the wild, especially blown up large, where every flaw becomes impossible to miss. Smaller text hides them more kindly.</p>
+
+      <img src="assets/robi-inuse-h.webp" alt="The Robi font on a large signboard for Faridpur Press Club" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 20px;">The font in the wild — on banners, shop signboards, and leaflets across the country.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">But there's something genuinely moving about working with a brand of that scale. This font ended up everywhere, on massive banners, on tiny shop signboards, on leaflets on local store counters, quietly present across the entire country in ways a personal project never could be. I've always believed it needed two or three more real revisions to be what it should have been, and I doubt anyone on Robi's team today even knows who originally designed it. Both things can be true. It's flawed, and it's still one of the things I'm proudest of.</p>
+    </section>
+
+    <section id="sec-6" data-nav-title="What It Set in Motion" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">What It Set in Motion</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">After the font shipped, Tirana and I kept working on Bangla typography together, three more projects by 2014. Somewhere in that period we'd half-joked that if we ever shared a home, we'd probably do nothing but design letters all day. Life didn't quite work out that way, career and family reshaped how much room there was for it, but the dream itself never really left.</p>
+
+      <img src="assets/robi-tirana-h.webp" alt="Tirana and me around the time of the Robi font project" style="width:100%;display:block;margin-bottom:20px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 32px;">Tirana and me, around the time we worked on this.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">There was a version of that dream that included a full typography exhibition, at least 20 original fonts, a real shift in how Bangla type gets made. I can't claim we personally delivered all of that. But looking at the past decade, Bangla typography as a field has genuinely transformed, more local and international fonts, wider use, real craftsmanship from a growing community of people who care about this the way we did.</p>
+    </section>
+
+    <section id="sec-7" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Reflection</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">This was never a project with a lesson to teach or a point to prove. It's just a story I've told many times, to friends, to colleagues, and I've never seen the harm in telling a good story more than once. If anything, revisiting it now leaves me with one honest, unfinished thought: we can still do more with this. I don't fully know yet what that looks like. But I intend to find out.</p>
+      <div style="margin-top:20px;">
+        <dc-import name="Note" icon="external" text="This story is also written up in Bangla on Medium." links="{{ mediumNoteLinks }}" hint-size="100%,40px"></dc-import>
+      </div>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-Lekhok.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Lekhok Keyboard</a>
+      <a href="Case-Study-Newspapers.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">Redesigning Bangladesh's Two Biggest Newspapers →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      navLabel: this.state.isMobile ? 'Robi Bangla Font' : 'The Robi Bangla Font',
+      mediumNoteLinks: [{ label: 'Read the story in Bangla on Medium', url: 'https://medium.com/made-in-bangladesh/%E0%A6%86%E0%A6%AA%E0%A6%A8%E0%A6%BE%E0%A6%B0-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A7%87%E0%A6%B2-%E0%A6%8F%E0%A6%96%E0%A6%A8-%E0%A6%B0%E0%A6%AC%E0%A6%BF-%E0%A6%8F%E0%A6%9F%E0%A6%BE-%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%9C%E0%A7%80%E0%A6%AC%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%9B%E0%A6%AC%E0%A6%BF-67fd00beebda?sharedUserId=nazimuddaula' }],
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

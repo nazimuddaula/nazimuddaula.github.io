@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    image-slot::part(frame){background:transparent;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
+  </nav>
+
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Ad-Tech · 2009–2013 · Co-Founder</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">G&amp;R, Building the Ad Network</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">The first four years of G&amp;R: an unexpected beginning, an early product that taught us the market, and inventing Bangladesh's first online ad market from scratch.</p>
+  </header>
+
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+    <img src="assets/gr-cover.webp" alt="The rooftop office in Banani where G&amp;R was founded" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;margin:{{ coverBleedMargin }};display:block;">
+    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The rooftop office in Banani, four cubicles (in the other room) and one table.&nbsp;One happy winter evening in our old office where the ad network was born.</p>
+
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
+      <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="width:{{ item.dashWidth }};height:1px;background:{{ item.color }};display:inline-block;flex-shrink:0;transition:width 0.2s ease;"></span>
+            <span style="font-size:11px;line-height:1.3;color:{{ item.color }};font-weight:{{ item.weight }};">{{ item.title }}</span>
+          </a>
+        </sc-for>
+      </aside>
+      <main style="padding:0 0 96px;">
+
+    <section id="sec-1" data-nav-title="About G&amp;R" style="margin-bottom:56px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">About G&amp;R</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Green and Red Technologies, known as G&amp;R, is Bangladesh's first online advertising network. I co-founded it in 2009 as Art Director. This is the story of its first four years: finding the idea, building the team, and inventing a market that didn't exist yet.</p>
+    </section>
+
+    <div style="margin:0 0 56px;">
+      <dc-import name="Note" icon="link" text="This account is adapted from a longer personal story I originally wrote and published on Medium in 2014." links="{{ mediumNoteLinks }}" hint-size="100%,40px"></dc-import>
+    </div>
+
+    <section id="sec-2" data-nav-title="An Unexpected Beginning" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">An Unexpected Beginning</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">In 2009, while freelancing for overseas clients and redesigning The Daily Star's website, I got an email out of nowhere from a man in London who'd worked at Google. He wanted to talk about the state of the internet in Bangladesh, a topic I hadn't given much thought to.</p>
+      <div style="float:left;width:280px;margin:0 32px 16px 0;">
+        <img src="assets/gr-logo.webp" alt="The G&amp;R logo, simple by design" style="width:100%;display:block;">
+        <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The G&amp;R logo, simple by design.</p>
+      </div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">That conversation changed how I saw the internet's potential in my own country, and by July 2009, G&amp;R was officially incorporated. The name and logo were simple by design: Green and Red, the colors of Bangladesh. The first thing I ever drew for it was three small squares, like starting points, a loading sign, something's continuity.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;clear:both;">That early mark for continuity carried through years of brand refreshes, evolving alongside the product itself while keeping the same core idea intact.</p>
+    </section>
+
+    <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:40px;line-height:normal;color:#000080;text-align:center;max-width:600px;margin:80px auto;padding:0;">"The G&amp;R logo represents the colors of Bangladesh, as does the name Green and Red."</blockquote>
+
+    <section id="sec-3" data-nav-title="Goromcha" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Goromcha: The First Lesson</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Our first product, launched in January 2010, was Goromcha, a daily local information site for Bangladeshis. I poured everything into it: every icon, every interaction, all built from scratch with a small team and our first employee, a Partnerships Manager.</p>
+
+      <img src="assets/gr-goromcha.webp" alt="Goromcha, our first product" style="width:100%;display:block;margin-bottom:20px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:-4px 0 20px;">Goromcha, our first product, a daily local information site for Bangladeshis.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Goromcha never became the business we hoped for. But it taught us the actual shape of the Bangladeshi internet, its users, its publishers, its gaps, and that education became the foundation for everything that followed. Without it, we would never have understood the market well enough to build what came next.</p>
+    </section>
+
+    <section id="sec-4" data-nav-title="Finding the Real Idea" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Finding the Real Idea</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">By October 2010, we'd landed on something more specific: building Bangladesh's first online advertising network. Nobody around us really understood what that meant yet, including, honestly, me. We spent nearly a year and a half researching and testing before we had something real.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Early 2011 was a scramble of firsts: our first rented office, a shared rooftop room in Banani with four cubicles and one table. Pitching over 30 clients in a single quarter before we'd even launched. Introducing concepts to the Bangladeshi market that didn't exist locally yet, CPM, CPC, CTR, and trying to shift advertisers away from thinking in fixed ad placements toward thinking in real value. Many people laughed at us. Some advertisers rejected us outright. We kept going anyway.</p>
+
+      <img src="assets/gr-early-product.webp" alt="The 1st version of the G&amp;R ad network dashboard" style="width:100%;display:block;margin-bottom:20px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:-4px 0 20px;">The 1st version of G&amp;R Ad Network, a simple dashboard covering only the important features. It was a learning phase for both us and market.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">In July 2011, our first ads went live on two small sites, followed by permission to test on Prothom Alo, Bangladesh's most-read news site, which let us serve millions of test ads for free while we proved the model worked. That same month brought our first publisher partnership, and the network started to grow.</p>
+    </section>
+
+    <section id="sec-5" data-nav-title="Building the Business" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Building the Business, Person by Person</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Growth from here came in small, hard-won steps: a second engineer hired in August 2011, right after we lost our first one, a loss that felt catastrophic at the time but eventually gave us the engineer who'd go on to become G&amp;R's CTO. Our first sales hire came in November, after a year of engineers and me handling every client meeting ourselves. Our first major client signed on in October 2011.</p>
+
+      <img src="assets/gr-gallery.webp" alt="Presenting G&amp;R in the early days" style="width:100%;display:block;margin-bottom:20px;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:-4px 0 20px;">In the early days, one of my regular activities were to present G&amp;R wherever we got a floor. It's not something I normally enjoy but I am kind of proud about those days.</p>
+
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">By 2012, we were a team of twelve who mostly ignored office hours but cared deeply about what we were building. We learned, painfully and gradually, how to read a client in the first ten minutes of a meeting, and used that instinct to sharpen our sales approach. I pitched almost exclusively in Bangla, not English, a deliberate choice. It positioned G&amp;R as something genuinely local, and it let me actually say what I meant.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">By late 2012, our publisher network had grown past 500, and paying them on time, no exceptions, became a point of principle even when it meant no budget left over for marketing our own brand. Most people outside the industry still couldn't pronounce our name.</p>
+    </section>
+
+    <section id="sec-7" data-nav-title="Rebuilding, Twice" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Rebuilding, Twice</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Through 2012 and 2013, G&amp;R shifted to become a product-only company, cutting the service work (website builds, Facebook app development) that had been subsidizing us but diluting our focus. That shift meant learning to actually run product properly: writing real requirements documents, using project management tools, building process where instinct alone used to carry us.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">In mid-2013, with a new office and a system straining under its own success (at one point crashing entirely after serving nearly a billion ads in 25 days, a brutal lesson in infrastructure redundancy), I sat down with pencil and paper and sketched roughly a hundred screens by hand to rethink the entire ad network from the ground up.</p>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">G&amp;R 2.0 launched in October 2013, anchored by our biggest campaign yet. It didn't last long, not because it failed, but because the business was moving too fast to sit still. Within months we'd outgrown it again, and G&amp;R 3.0 became the next necessary rebuild: this time shaped heavily by real user feedback from our account managers and power users, standardized, localized, and built around what we'd actually learned rather than early guesswork.</p>
+    </section>
+
+    <section id="sec-gio" data-nav-title="Google I/O 2014" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Featured at Google I/O 2014</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">G&amp;R was featured on the startups wall at Google I/O 2014. In this video, we discuss the challenges and surprises of launching in the Bangla language.</p>
+      <div style="width:100%;aspect-ratio:16/9;">
+        <iframe src="https://www.youtube-nocookie.com/embed/IHYd0f_kVS8" title="G&amp;R at Google I/O 2014" referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:100%;border:none;display:block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      </div>
+    </section>
+
+    <section id="sec-8" data-nav-title="G&amp;R 3.0" style="padding-top:56px;border-top:1px solid var(--rule);">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Where G&amp;R 3.0 Landed</div>
+      <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 32px;">By the time 3.0 shipped in early 2014, G&amp;R had a bigger team, better process, and real infrastructure behind it, standardized, localized, and built around what we'd actually learned running the network at scale.</p>
+      <img src="assets/gr-v3.webp" alt="G&amp;R 3.0 product" style="width:100%;display:block;">
+      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">G&amp;R 3.0, standardized and localized, with more control and tools for both advertisers and publishers.</p>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="Case-Study-GR-Horizon.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← G&amp;R, Increasing the Product Horizon</a>
+      <a href="Case-Study-JossPay.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">JossPay, the Wallet →</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+    this.initNav();
+    }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    if (this._observer) this._observer.disconnect();
+  }
+  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  initNav() {
+    requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
+      if (!nodes.length) return;
+      this.setState({ sections: nodes.map((n) => ({ id: n.id, title: n.getAttribute('data-nav-title') })), activeId: nodes[0].id });
+      if (this._observer) this._observer.disconnect();
+      this._observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) this.setState({ activeId: entry.target.id }); });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      nodes.forEach((n) => this._observer.observe(n));
+    });
+  }
+  renderVals() {
+    const navItems = (this.state.sections || []).map((s) => ({
+      id: s.id,
+      title: s.title,
+      href: '#' + s.id,
+      color: s.id === this.state.activeId ? 'var(--ink)' : 'var(--muted)',
+      weight: s.id === this.state.activeId ? '600' : '400',
+      dashWidth: s.id === this.state.activeId ? '18px' : '8px'
+    }));
+    return {
+      navItems,
+      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgGridCols: this.state.isMobile ? '1fr' : '280px 1fr',
+      navLabel: this.state.isMobile ? 'G&R' : 'G&R, Building the Ad Network',
+      mediumNoteLinks: [{ label: 'Read the original on Medium', url: 'https://medium.com/nazimuddaula/building-an-ad-network-in-bangladesh-e455c06eb93f?sharedUserId=nazimuddaula' }],
+      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
+      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

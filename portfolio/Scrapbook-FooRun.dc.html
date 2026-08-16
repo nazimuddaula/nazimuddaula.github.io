@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400&amp;family=Offside&amp;family=Over+the+Rainbow&amp;display=swap">
+  <style>
+    body{margin:0;}
+    a{color:inherit;text-decoration:none;}
+    ::selection{background:#1A1A1A;color:#F5F5F5;}
+    strong{font-weight:400;}
+    em{font-style:normal;}
+  </style>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V1890Q2BRQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V1890Q2BRQ');
+  </script>
+</helmet>
+
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#7C3AED;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;">
+
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
+    <span style="font-size:12px;color:var(--muted);">Scrapbook, Foo.run</span>
+  </nav>
+
+  <div style="position:relative;width:100%;box-sizing:border-box;height:{{ collageHeight }};display:flex;align-items:center;justify-content:center;padding:{{ collagePadding }};background:radial-gradient(circle at 12% 18%, rgba(124,58,237,0.09), transparent 40%), radial-gradient(circle at 88% 78%, rgba(249,115,22,0.09), transparent 42%);overflow:hidden;">
+    <div style="position:relative;width:100%;max-width:1100px;margin:0 auto;">
+
+    <div style="position:absolute;top:-4%;right:4%;font-family:'Offside',sans-serif;font-size:180px;line-height:1;color:var(--accent);opacity:0.18;transform:rotate(6deg);z-index:0;">→</div>
+
+    <div style="position:absolute;top:10%;left:4%;width:52px;height:52px;border-radius:16px;border:6px solid #F97316;opacity:0.55;transform:rotate(-18deg);z-index:0;"></div>
+    <div style="position:absolute;top:10%;left:calc(4% + 34px);width:52px;height:52px;border-radius:16px;border:6px solid #F97316;opacity:0.55;transform:rotate(-18deg) translateY(18px);z-index:0;"></div>
+
+    <div style="position:absolute;top:42%;left:0.5%;width:70px;height:0;border-top:3px dashed var(--accent);opacity:0.5;transform:rotate(-4deg);z-index:0;"></div>
+    <div style="position:absolute;top:calc(42% + 22px);left:0.5%;width:46px;height:0;border-top:3px dashed var(--accent);opacity:0.4;transform:rotate(-4deg);z-index:0;"></div>
+
+    <div style="position:absolute;bottom:8%;right:6%;width:80px;height:34px;border-radius:17px;border:3px solid #22C55E;opacity:0.75;z-index:0;"></div>
+    <div style="position:absolute;bottom:calc(8% + 12px);right:calc(6% + 30px);width:8px;height:8px;border-radius:50%;background:#22C55E;opacity:0.9;z-index:0;"></div>
+
+    <div style="position:absolute;bottom:14%;left:6%;width:110px;height:110px;background-image:radial-gradient(var(--accent) 4px, transparent 4.5px);background-size:20px 20px;opacity:0.28;z-index:0;transform:rotate(-6deg);"></div>
+
+    <div style="position:absolute;top:4%;left:38%;font-family:'Hepta Slab',serif;font-size:15px;font-weight:300;letter-spacing:0.05em;color:var(--muted);opacity:0.5;transform:rotate(-3deg);z-index:0;">foo.run/x7k</div>
+
+    <div style="position:absolute;top:60%;right:2%;width:0;height:64px;border-left:3px dotted #F97316;opacity:0.5;z-index:0;"></div>
+
+    <div style="position:absolute;bottom:2%;left:34%;width:64px;height:26px;border-radius:13px;background:#FACC15;opacity:0.7;z-index:0;transform:rotate(5deg);"></div>
+
+    <div style="position:absolute;top:26%;right:16%;width:36px;height:3px;background:var(--accent);opacity:0.45;transform:rotate(38deg);z-index:0;"></div>
+    <div style="position:absolute;top:calc(26% + 10px);right:calc(16% - 8px);width:36px;height:3px;background:var(--accent);opacity:0.45;transform:rotate(38deg);z-index:0;"></div>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:32px;position:relative;z-index:1;">
+        <div style="position:relative;width:100%;transform:rotate(-1.5deg);">
+          <div style="position:absolute;top:-12px;left:50%;width:52px;height:20px;background:var(--accent);opacity:0.8;transform:translateX(-50%) rotate(-2deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.15);">
+            <img src="assets/foorun-1-homepage.webp" alt="Foo.run homepage" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;">
+          <div style="background:#FFFFFF;border-radius:50%;padding:8px;box-shadow:0 8px 18px rgba(0,0,0,0.18);transform:rotate(4deg);">
+            <img src="assets/foorun-2-logo.webp" alt="Logo or mark detail" style="width:104px;height:104px;object-fit:cover;border-radius:50%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:100%;transform:rotate(1deg);">
+          <div style="position:absolute;top:-12px;left:18%;width:48px;height:18px;background:#F97316;opacity:0.8;transform:rotate(3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.16);">
+            <img src="assets/foorun-3-link-result.webp" alt="Shortened link result screen" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:100%;transform:rotate(-1deg);">
+          <div style="position:absolute;top:-12px;left:60%;width:48px;height:18px;background:#FACC15;opacity:0.85;transform:rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:10px 10px 22px;box-shadow:0 8px 20px rgba(0,0,0,0.16);">
+            <img src="assets/foorun-4-stats.webp" alt="Click stats dashboard" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:70%;margin:0 auto;transform:rotate(2deg);">
+          <div style="position:absolute;top:-10px;right:20%;width:42px;height:16px;background:#22C55E;opacity:0.55;transform:rotate(4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 18px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/foorun-5-sketch.webp" alt="Sketch or detail" style="width:100%;display:block;">
+          </div>
+        </div>
+        <div style="position:relative;width:76%;margin:0 auto;transform:rotate(-2deg);">
+          <div style="position:absolute;top:-10px;left:20%;width:42px;height:16px;background:var(--accent);opacity:0.6;transform:rotate(3deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+          <div style="background:#FFFFFF;padding:8px 8px 18px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+            <img src="assets/foorun-6-mobile.webp" alt="Mobile view" style="width:100%;display:block;">
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative;z-index:1;">
+        <div style="position:relative;display:flex;align-items:flex-start;justify-content:center;">
+          <div style="position:relative;width:22%;transform:rotate(-8deg);z-index:2;">
+            <div style="position:absolute;top:-10px;left:20%;width:40px;height:16px;background:#FACC15;opacity:0.9;transform:rotate(-6deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+            <div style="background:#FFFFFF;padding:8px 8px 20px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+              <img src="assets/foorun-5-sketch.webp" alt="Sketch or detail" style="width:100%;display:block;">
+            </div>
+          </div>
+
+          <div style="position:relative;width:52%;margin-left:-4%;margin-top:36px;transform:rotate(3deg);z-index:3;">
+            <div style="position:absolute;top:-14px;left:45%;width:58px;height:22px;background:var(--accent);opacity:0.85;transform:translateX(-50%) rotate(-4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+            <div style="background:#FFFFFF;padding:12px 12px 30px;box-shadow:0 10px 26px rgba(0,0,0,0.16);">
+              <img src="assets/foorun-1-homepage.webp" alt="Foo.run homepage" style="width:100%;display:block;">
+            </div>
+          </div>
+
+          <div style="position:relative;width:104px;flex-shrink:0;margin-left:-3%;transform:translateY(8px) rotate(-9deg);z-index:4;">
+            <div style="background:#FFFFFF;border-radius:50%;padding:7px;box-shadow:0 8px 18px rgba(0,0,0,0.18);">
+              <img src="assets/foorun-2-logo.webp" alt="Logo or mark detail" style="width:90px;height:90px;object-fit:cover;border-radius:50%;display:block;">
+            </div>
+          </div>
+        </div>
+
+        <div style="position:relative;display:flex;align-items:flex-end;justify-content:center;margin-top:14px;">
+          <div style="position:relative;width:130px;flex-shrink:0;margin-right:-4%;transform:rotate(8deg);z-index:2;">
+            <div style="position:absolute;top:-10px;right:24%;width:38px;height:14px;background:var(--accent);opacity:0.55;transform:rotate(-6deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+            <div style="background:#FFFFFF;padding:8px 8px 18px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+              <img src="assets/foorun-6-mobile.webp" alt="Mobile view" style="width:100%;display:block;">
+            </div>
+          </div>
+
+          <div style="position:relative;width:36%;margin-top:16px;transform:rotate(-2deg);z-index:3;">
+            <div style="position:absolute;top:-12px;left:22%;width:52px;height:20px;background:#F97316;opacity:0.8;transform:rotate(4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+            <div style="background:#FFFFFF;padding:10px 10px 26px;box-shadow:0 10px 24px rgba(0,0,0,0.18);">
+              <img src="assets/foorun-3-link-result.webp" alt="Shortened link result screen" style="width:100%;display:block;">
+            </div>
+          </div>
+
+          <div style="position:relative;width:20%;margin-left:-4%;transform:rotate(6deg);z-index:2;">
+            <div style="position:absolute;top:-10px;right:16%;width:44px;height:18px;background:#22C55E;opacity:0.6;transform:rotate(-4deg);box-shadow:0 1px 2px rgba(0,0,0,0.15);"></div>
+            <div style="background:#FFFFFF;padding:8px 8px 20px;box-shadow:0 8px 18px rgba(0,0,0,0.16);">
+              <img src="assets/foorun-4-stats.webp" alt="Click stats dashboard" style="width:100%;display:block;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+    </div>
+  </div>
+
+  <header style="max-width:640px;margin:0 auto;padding:56px clamp(24px,6vw,32px) 96px;text-align:center;">
+    <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Scrapbook</div>
+    <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 16px;">Foo.run, the Bangla URL Shortener</h1>
+    <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">A link shortener for the Bangla web, built around a monetization model that let influencers earn from the links they shared.&nbsp;</p>
+  </header>
+
+  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+    <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <a href="index.html#scrapbook" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Back to Scrapbook</a>
+    </div>
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-top:24px;border-top:1px solid var(--rule);">
+      <div>
+        <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
+        <div style="font-size:12px;color:var(--muted);">Senior UI/UX Designer · Neura Robotics, Germany</div>
+      </div>
+      <div style="display:flex;gap:24px;font-size:12px;font-weight:600;">
+        <a href="https://www.linkedin.com/in/nazimuddaula/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://nazimuddaula.substack.com/" target="_blank" rel="noopener">Journal</a>
+        <a href="Resume.dc.html">Resume</a>
+      </div>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;font-size:12px;color:var(--muted);">© 2009–2026 Muhammad Nazimuddaula</div>
+    <div style="max-width:1160px;margin:12px auto 0;font-size:12px;color:var(--muted);line-height:1.5;">To comply with my non-disclosure agreements, I have omitted and obfuscated confidential information. All information in this portfolio is my own and does not necessarily reflect the views of the organizations I’ve worked for.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: false };
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+  handleResize = () => { this.setState({ isMobile: window.innerWidth < 640 }); };
+  renderVals() {
+    return {
+      isMobile: this.state.isMobile,
+      isDesktop: !this.state.isMobile,
+      collagePadding: this.state.isMobile ? '48px clamp(24px,6vw,64px) 24px' : '72px clamp(24px,6vw,64px) 40px',
+      collageHeight: this.state.isMobile ? 'auto' : '740px'
+    };
+  }
+}
+
+</script>
+</body>
+</html>
