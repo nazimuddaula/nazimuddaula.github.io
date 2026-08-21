@@ -43,22 +43,22 @@
 
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 24px;font-family:sans-serif;"><h1>Deligram's Mobile-First Approach</h1><p>Head of Product Design at Deligram — one unified experience for omnichannel retail, built in a week.</p><p><a href="index.html">Back to Muhammad Nazimuddaula's portfolio</a></p></div></noscript>
 
-<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;container-type:inline-size;max-width:{{ frameWidth }};margin:{{ frameMargin }};outline:{{ frameOutline }};box-shadow:{{ frameShadow }};">
 
-  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6cqw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
     <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
     <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
   </nav>
 
-  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6cqw,32px) 48px;">
     <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Retail · Jul–Nov 2019 · Head of Product Design</div>
     <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Deligram's Mobile-First Approach</h1>
     <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Giving a hybrid omnichannel-retail startup an app-like mobile experience.</p>
   </header>
 
-  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6cqw,64px);">
     <img src="assets/deligram-cover.webp" alt="Deligram corporate website" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
-    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">A corporate website designed for Deligram, focused on showcasing the bigger picture.</p>
+    <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 0;">A corporate website designed for Deligram, focused on showcasing the bigger picture.</p>
   
     <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
       <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
@@ -90,7 +90,7 @@
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">The fastest answer wasn't a native app. It was a lightweight, mobile-optimized website with an app-like feel, built quickly by the existing team. We paired it with an Android app that loaded the same experience through web views, giving Deligram a real mobile presence without the cost or timeline of full native development.</p>
 
       <img src="assets/deligram-gallery-h2.png" alt="Deligram mobile-first screens: home, category browsing, product listing, product detail" style="width:100%;display:block;margin-top:32px;">
-      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The app-like designs were first built for the mobile site, and eventually became Deligram's mobile-first storefront: category browsing, product listings, and the product detail page.</p>
+      <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 0;">The app-like designs were first built for the mobile site, and eventually became Deligram's mobile-first storefront: category browsing, product listings, and the product detail page.</p>
 
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:32px 0 0;">The product page carried the same catalog whether a customer arrived through the app, the website, or an agent point, one experience across every channel.</p>
     </section>
@@ -101,7 +101,7 @@
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The system needed a reliable way to identify both people and places without any digital account behind it. I designed a coding structure using the first letter of the user type (Agent, Vendor, Delivery, or Customer) combined with a randomly generated alphanumeric ID, a scheme capable of supporting up to 165 million unique IDs. Simple enough to read off a phone call, robust enough to scale.</p>
 
       <img src="assets/deligram-phone-h.webp" alt="Deligram kiosk catalog and phone-order coding structure" style="width:100%;display:block;">
-      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">Not the usual UX design work — something built for a real, practical world. The kiosk catalog and coding structure behind the phone-order system.</p>
+      <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 0;">Not the usual UX design work — something built for a real, practical world. The kiosk catalog and coding structure behind the phone-order system.</p>
     </section>
 
     <section id="sec-5" data-nav-title="Agent Onboarding" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
@@ -109,7 +109,7 @@
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Deligram's agent network still ran on a manual, offline process for collecting agent information and documentation, slow and hard to scale. I designed an onboarding flow through the Deligram Agent app that let anyone interested in becoming an agent register directly: entering shop details, location, and average sales, and submitting a trade license image, all from their phone. It was meant to replace a paperwork-heavy process with something an agent could complete on their own in minutes, while still capturing what Deligram needed to review and approve them.</p>
 
       <img src="assets/deligram-onboarding-h.webp" alt="Deligram Agent app self-serve onboarding flow" style="width:100%;display:block;">
-      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 0;">The last thing I designed at Deligram: the Agent app's self-serve onboarding flow.</p>
+      <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 0;">The last thing I designed at Deligram: the Agent app's self-serve onboarding flow.</p>
     </section>
 
     <section id="sec-6" data-nav-title="Reflection" style="padding-top:56px;border-top:1px solid var(--rule);">
@@ -123,7 +123,7 @@
     </div>
   </div>
 
-  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+  <footer style="padding:32px clamp(24px,6cqw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
     <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
       <a href="Case-Study-Maya.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← Redesigning Maya</a>
       <a href="Case-Study-GR-IPO.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">G&amp;R, Taking to IPO →</a>
@@ -145,9 +145,9 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;previewDevice&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Desktop&quot;,&quot;options&quot;:[&quot;Desktop&quot;,&quot;Tablet&quot;,&quot;Mobile&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Preview&quot;}}">
 class Component extends DCLogic {
-  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  state = { sections: [], activeId: null, rawNavHidden: true, rawIsMobile: false };
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
@@ -157,7 +157,7 @@ class Component extends DCLogic {
     window.removeEventListener('resize', this.handleResize);
     if (this._observer) this._observer.disconnect();
   }
-  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  handleResize = () => { this.setState({ rawNavHidden: window.innerWidth < 1024, rawIsMobile: window.innerWidth < 640 }); };
   initNav() {
     requestAnimationFrame(() => {
       const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
@@ -171,6 +171,10 @@ class Component extends DCLogic {
     });
   }
   renderVals() {
+    const device = this.props.previewDevice ?? 'Desktop';
+    const isMobile = device === 'Mobile' ? true : device === 'Tablet' ? false : this.state.rawIsMobile;
+    const navHidden = device === 'Mobile' ? true : device === 'Tablet' ? true : this.state.rawNavHidden;
+    const frameWidth = device === 'Mobile' ? '390px' : device === 'Tablet' ? '768px' : 'none';
     const navItems = (this.state.sections || []).map((s) => ({
       id: s.id,
       title: s.title,
@@ -181,13 +185,17 @@ class Component extends DCLogic {
     }));
     return {
       navItems,
-      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
-      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
-      vImgGridCols: this.state.isMobile ? '1fr' : '280px 1fr',
-      navLabel: this.state.isMobile ? 'Deligram' : "Deligram's Mobile-First Approach",
-      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
-      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%',
-      techcrunchNoteLinks: [{ label: 'Read the TechCrunch feature', url: 'https://techcrunch.com/2019/05/21/deligram/' }]
+      navDisplay: (!navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgGridCols: isMobile ? '1fr' : '280px 1fr',
+      navLabel: isMobile ? 'Deligram' : "Deligram's Mobile-First Approach",
+      coverBleedMargin: isMobile ? '0 calc(-1 * clamp(24px,6cqw,64px))' : '0',
+      coverBleedWidth: isMobile ? 'calc(100% + 2 * clamp(24px,6cqw,64px))' : '100%',
+      techcrunchNoteLinks: [{ label: 'Read the TechCrunch feature', url: 'https://techcrunch.com/2019/05/21/deligram/' }],
+      frameWidth,
+      frameMargin: device === 'Desktop' ? '0' : '0 auto',
+      frameOutline: device === 'Desktop' ? 'none' : '1px solid #DDDDDD',
+      frameShadow: device === 'Desktop' ? 'none' : '0 0 40px rgba(0,0,0,0.12)'
     };
   }
 }

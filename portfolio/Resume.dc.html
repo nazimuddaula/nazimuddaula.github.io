@@ -45,14 +45,14 @@
 
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 24px;font-family:sans-serif;"><h1>Resume — Muhammad Nazimuddaula</h1><p>Resume of Muhammad Nazimuddaula, Senior UI/UX Designer with 16+ years of experience in product design, robotics, fintech, and e-commerce.</p><p><a href="index.html">Back to portfolio home</a></p></div></noscript>
 
-<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;">
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;container-type:inline-size;max-width:{{ frameWidth }};margin:{{ frameMargin }};outline:{{ frameOutline }};box-shadow:{{ frameShadow }};">
 
-  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6cqw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
     <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
     <span style="font-size:12px;color:var(--muted);">Resume</span>
   </nav>
 
-  <header style="padding:64px clamp(24px,6vw,64px) 48px;border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+  <header style="padding:64px clamp(24px,6cqw,64px) 48px;border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
     <div style="max-width:840px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
       <div>
         <h1 style="font-size:28px;font-weight:500;margin:0 0 8px;">Muhammad Nazimuddaula</h1>
@@ -71,7 +71,7 @@
     </div>
   </header>
 
-  <section style="padding:48px clamp(24px,6vw,64px);">
+  <section style="padding:48px clamp(24px,6cqw,64px);">
     <div style="max-width:840px;margin:0 auto;">
 
       <p style="font-family:'Hepta Slab';font-size:15px;line-height:1.6;margin:0 0 40px;">15+ years working at the intersection of interaction design, systems thinking, and product strategy. Currently focused on translating complex technical and robotic behavior into coherent user experience, in environments where the hard problems exist before any screen is drawn.</p>
@@ -246,7 +246,7 @@
     </div>
   </section>
 
-  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);">
+  <footer style="padding:32px clamp(24px,6cqw,64px) 48px;border-top:1px solid var(--rule);">
     <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;">
       <div>
         <div style="font-weight:700;font-size:12px;">Muhammad Nazimuddaula</div>
@@ -264,11 +264,17 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;previewDevice&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Desktop&quot;,&quot;options&quot;:[&quot;Desktop&quot;,&quot;Tablet&quot;,&quot;Mobile&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Preview&quot;}}">
 class Component extends DCLogic {
   state = {};
     renderVals() {
+    const device = this.props.previewDevice ?? 'Desktop';
+    const frameWidth = device === 'Mobile' ? '390px' : device === 'Tablet' ? '768px' : 'none';
     return {
+      frameWidth,
+      frameMargin: device === 'Desktop' ? '0' : '0 auto',
+      frameOutline: device === 'Desktop' ? 'none' : '1px solid #DDDDDD',
+      frameShadow: device === 'Desktop' ? 'none' : '0 0 40px rgba(0,0,0,0.12)'
     };
   }
 }

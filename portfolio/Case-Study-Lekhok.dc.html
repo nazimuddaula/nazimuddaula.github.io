@@ -43,22 +43,22 @@
 
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 24px;font-family:sans-serif;"><h1>Lekhok Keyboard</h1><p>A personal project: a non-phonetic Bangla keyboard.</p><p><a href="index.html">Back to Muhammad Nazimuddaula's portfolio</a></p></div></noscript>
 
-<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;">
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#1A1A1A;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:#FFFFFF;color:var(--ink);min-height:100vh;container-type:inline-size;max-width:{{ frameWidth }};margin:{{ frameMargin }};outline:{{ frameOutline }};box-shadow:{{ frameShadow }};">
 
-  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6cqw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
     <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
     <span style="font-size:12px;color:var(--muted);white-space:nowrap;">{{ navLabel }}</span>
   </nav>
 
-  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6vw,32px) 48px;">
+  <header style="max-width:760px;margin:0 auto;padding:64px clamp(24px,6cqw,32px) 48px;">
     <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Personal Project · 2014 – 2015</div>
     <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 24px;">Lekhok Keyboard</h1>
     <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Not every project on this page was built for a company. Lekhok Keyboard was built for a language.</p>
   </header>
 
-  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6vw,64px);">
+  <div style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,6cqw,64px);">
     <img src="assets/lekhok-cover.webp" alt="Lekhok Keyboard key layout" style="width:{{ coverBleedWidth }};aspect-ratio:16/9;object-fit:cover;display:block;margin:{{ coverBleedMargin }};">
-    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:12px clamp(16px,10vw,120px) 0 clamp(16px,4vw,40px);">The Lekhok Keyboard key layout. This wasn't a unique idea, plenty of others were tackling the same problem, and some even turned it into a real business. I just wanted to build my own version.</p>
+    <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 0;">The Lekhok Keyboard key layout. This wasn't a unique idea, plenty of others were tackling the same problem, and some even turned it into a real business. I just wanted to build my own version.</p>
   
     <div style="display:grid;grid-template-columns:{{ gridCols }};gap:48px;align-items:start;margin-top:64px;">
       <aside style="position:sticky;top:32px;display:{{ navDisplay }};flex-direction:column;gap:12px;padding-top:64px;">
@@ -84,7 +84,7 @@
     </section>
 
     <img src="assets/lekhok-gallery-h2.webp" alt="Bangla conjunct characters" style="width:100%;display:block;">
-    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 56px;">Bangla's long list of complex conjunct characters makes the language genuinely hard to learn, even for native speakers.</p>
+    <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 56px;">Bangla's long list of complex conjunct characters makes the language genuinely hard to learn, even for native speakers.</p>
 
     <section id="sec-3" data-nav-title="The Idea Behind Lekhok" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
       <h2 style="margin:0 0 16px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">The Idea Behind Lekhok</h2>
@@ -96,7 +96,7 @@
     <blockquote style="font-family:'Over the Rainbow',cursive;font-style:normal;font-size:40px;line-height:normal;color:#000080;text-align:center;max-width:600px;margin:80px auto;padding:0;">"I wanted to write Bangla the way I write English."</blockquote>
 
     <img src="assets/lekhok-gallery-h.webp" alt="Lekhok Keyboard layout sketches" style="width:100%;display:block;">
-    <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 56px;">Like most design work, it started on paper, sketching out combinations for the conjunct characters.</p>
+    <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 56px;">Like most design work, it started on paper, sketching out combinations for the conjunct characters.</p>
 
     <section id="sec-4" data-nav-title="Launch, and What Came After" style="margin-bottom:56px;padding-top:56px;border-top:1px solid var(--rule);">
       <h2 style="margin:0 0 16px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Launch, and What Came After</h2>
@@ -104,7 +104,7 @@
 
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">The typing screen puts that 25-key layout into practice, with the wildcard key handling conjuncts, vowel marks, and reph as you write.</p>
       <img src="assets/lekhok-keyboard-demo.gif" alt="Lekhok Keyboard typing demo" style="width:100%;display:block;">
-      <p style="font-family:'Over the Rainbow',cursive;font-size:20px;color:#000080;text-align:center;margin:8px 0 20px;">The keyboard in action, typing a conjunct in real time.</p>
+      <p style="font-family:'Offside',sans-serif;font-size:13px;line-height:1.5;color:#767676;text-align:center;margin:16px 0 20px;">The keyboard in action, typing a conjunct in real time.</p>
 
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0 0 20px;">Lekhok launched on Android two days before International Mother Language Day, on 19 February 2015. There was no press wave, no viral moment, nothing dramatic. It just quietly existed. Over time, usage grew, a few thousand people at first, eventually reaching around 100,000 downloads. Some users found it hard to switch from what they already knew. I understood that, and never tried to convince anyone they were wrong for preferring phonetic typing. I only wanted to build something for the people who felt the same pull I did, toward the complexity of the script rather than away from it.</p>
       <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">One thing I chose deliberately: I never pursued copyright protection for the keyboard layout or design. I wanted it open. If someone wanted to build a physical keyboard using this layout and sell it, I welcomed that, and offered to help however I could. This project was never about ownership. It was about the language surviving in its own form.</p>
@@ -120,7 +120,7 @@
     </div>
   </div>
 
-  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+  <footer style="padding:32px clamp(24px,6cqw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
     <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
       <a href="Case-Study-JossPay.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">← JossPay, the Wallet</a>
       <a href="Case-Study-Robi.dc.html" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">The Robi Bangla Font →</a>
@@ -142,9 +142,9 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;previewDevice&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Desktop&quot;,&quot;options&quot;:[&quot;Desktop&quot;,&quot;Tablet&quot;,&quot;Mobile&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Preview&quot;}}">
 class Component extends DCLogic {
-  state = { sections: [], activeId: null, navHidden: true, isMobile: false };
+  state = { sections: [], activeId: null, rawNavHidden: true, rawIsMobile: false };
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
@@ -154,7 +154,7 @@ class Component extends DCLogic {
     window.removeEventListener('resize', this.handleResize);
     if (this._observer) this._observer.disconnect();
   }
-  handleResize = () => { this.setState({ navHidden: window.innerWidth < 1024, isMobile: window.innerWidth < 640 }); };
+  handleResize = () => { this.setState({ rawNavHidden: window.innerWidth < 1024, rawIsMobile: window.innerWidth < 640 }); };
   initNav() {
     requestAnimationFrame(() => {
       const nodes = Array.from(document.querySelectorAll('[data-nav-title]'));
@@ -168,6 +168,10 @@ class Component extends DCLogic {
     });
   }
   renderVals() {
+    const device = this.props.previewDevice ?? 'Desktop';
+    const isMobile = device === 'Mobile' ? true : device === 'Tablet' ? false : this.state.rawIsMobile;
+    const navHidden = device === 'Mobile' ? true : device === 'Tablet' ? true : this.state.rawNavHidden;
+    const frameWidth = device === 'Mobile' ? '390px' : device === 'Tablet' ? '768px' : 'none';
     const navItems = (this.state.sections || []).map((s) => ({
       id: s.id,
       title: s.title,
@@ -178,14 +182,18 @@ class Component extends DCLogic {
     }));
     return {
       navItems,
-      navDisplay: (!this.state.navHidden && navItems.length > 0) ? 'flex' : 'none',
-      gridCols: (!this.state.navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
-      vImgFloat: this.state.isMobile ? 'none' : 'left',
-      vImgWidth: this.state.isMobile ? '100%' : '280px',
-      vImgMargin: this.state.isMobile ? '0 0 16px 0' : '0 32px 16px 0',
-      navLabel: this.state.isMobile ? 'Lekhok' : 'Lekhok Keyboard',
-      coverBleedMargin: this.state.isMobile ? '0 -24px' : '0',
-      coverBleedWidth: this.state.isMobile ? 'calc(100% + 48px)' : '100%'
+      navDisplay: (!navHidden && navItems.length > 0) ? 'flex' : 'none',
+      gridCols: (!navHidden && navItems.length > 0) ? '160px minmax(0,680px)' : 'minmax(0,680px)',
+      vImgFloat: isMobile ? 'none' : 'left',
+      vImgWidth: isMobile ? '100%' : '280px',
+      vImgMargin: isMobile ? '0 0 16px 0' : '0 32px 16px 0',
+      navLabel: isMobile ? 'Lekhok' : 'Lekhok Keyboard',
+      coverBleedMargin: isMobile ? '0 calc(-1 * clamp(24px,6cqw,64px))' : '0',
+      coverBleedWidth: isMobile ? 'calc(100% + 2 * clamp(24px,6cqw,64px))' : '100%',
+      frameWidth,
+      frameMargin: device === 'Desktop' ? '0' : '0 auto',
+      frameOutline: device === 'Desktop' ? 'none' : '1px solid #DDDDDD',
+      frameShadow: device === 'Desktop' ? 'none' : '0 0 40px rgba(0,0,0,0.12)'
     };
   }
 }

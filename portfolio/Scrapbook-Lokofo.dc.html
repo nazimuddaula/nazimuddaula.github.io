@@ -43,9 +43,9 @@
 
 <noscript><div style="max-width:640px;margin:40px auto;padding:0 24px;font-family:sans-serif;"><h1>Lokofo</h1><p>The local website: hyperlocal news and listings for a neighborhood, not a nation.</p><p><a href="index.html">Back to Muhammad Nazimuddaula's portfolio</a></p></div></noscript>
 
-<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#0D9488;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;">
+<div style="--ink:#1A1A1A;--paper:#F5F5F5;--muted:#6B6B6B;--accent:#0D9488;--rule:#DDDDDD;font-family:'Offside',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;container-type:inline-size;max-width:{{ frameWidth }};margin:{{ frameMargin }};outline:{{ frameOutline }};box-shadow:{{ frameShadow }};">
 
-  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6vw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:32px clamp(24px,6cqw,64px);border-bottom:1px solid var(--rule);background:var(--paper);position:sticky;top:0;z-index:10;">
     <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;" style-hover="opacity:0.65;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M19 12H5M5 12l6-6M5 12l6 6"></path></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><circle cx="9" cy="10" r="1" fill="var(--ink)"></circle><circle cx="15" cy="10" r="1" fill="var(--ink)"></circle><path d="M8 14.5c1 1.2 2.4 1.8 4 1.8s3-0.6 4-1.8"></path></svg></a>
     <span style="font-size:12px;color:var(--muted);">Scrapbook, Lokofo</span>
   </nav>
@@ -160,13 +160,13 @@
     </div>
   </div>
 
-  <header style="max-width:640px;margin:0 auto;padding:56px clamp(24px,6vw,32px) 96px;text-align:center;">
+  <header style="max-width:640px;margin:0 auto;padding:56px clamp(24px,6cqw,32px) 96px;text-align:center;">
     <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">Scrapbook</div>
     <h1 style="font-family:'Offside',sans-serif;font-size:32px;line-height:normal;font-weight:500;margin:0 0 16px;">Lokofo, the Local Website</h1>
     <p style="font-family:'Hepta Slab';font-weight:300;font-size:16px;line-height:1.5;margin:0;">Hyperlocal news and listings for a neighborhood, not a nation, an experiment in making "local" mean a few streets, not a whole city.</p>
   </header>
 
-  <footer style="padding:32px clamp(24px,6vw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
+  <footer style="padding:32px clamp(24px,6cqw,64px) 48px;border-top:1px solid var(--rule);background:var(--paper);">
     <div style="max-width:1160px;margin:0 auto 32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
       <a href="index.html#scrapbook" style="font-size:12px;font-weight:600;" style-hover="text-decoration:underline;">&larr; Back to Scrapbook</a>
     </div>
@@ -188,9 +188,9 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;previewDevice&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Desktop&quot;,&quot;options&quot;:[&quot;Desktop&quot;,&quot;Tablet&quot;,&quot;Mobile&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Preview&quot;}}">
 class Component extends DCLogic {
-  state = { isMobile: false };
+  state = { rawIsMobile: false };
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
@@ -198,13 +198,20 @@ class Component extends DCLogic {
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
   }
-  handleResize = () => { this.setState({ isMobile: window.innerWidth < 640 }); };
+  handleResize = () => { this.setState({ rawIsMobile: window.innerWidth < 640 }); };
   renderVals() {
+    const device = this.props.previewDevice ?? 'Desktop';
+    const isMobile = device === 'Mobile' ? true : device === 'Tablet' ? false : this.state.rawIsMobile;
+    const frameWidth = device === 'Mobile' ? '390px' : device === 'Tablet' ? '768px' : 'none';
     return {
-      isMobile: this.state.isMobile,
-      isDesktop: !this.state.isMobile,
-      collagePadding: this.state.isMobile ? '48px clamp(24px,6vw,64px) 24px' : '64px clamp(24px,6vw,64px) 40px',
-      collageHeight: this.state.isMobile ? 'auto' : '740px'
+      isMobile,
+      isDesktop: !isMobile,
+      collagePadding: isMobile ? '48px clamp(24px,6cqw,64px) 24px' : '64px clamp(24px,6cqw,64px) 40px',
+      collageHeight: isMobile ? 'auto' : '740px',
+      frameWidth,
+      frameMargin: device === 'Desktop' ? '0' : '0 auto',
+      frameOutline: device === 'Desktop' ? 'none' : '1px solid #DDDDDD',
+      frameShadow: device === 'Desktop' ? 'none' : '0 0 40px rgba(0,0,0,0.12)'
     };
   }
 }
